@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.TrayMapper">
+    <resultMap id="trayMap" type="team.bishe.wms.bean.Tray">
+        <id property="id" column="tray_id"/>
+        <result property="num" column="tray_num"/>
+        <result property="posName" column="pos_nm"/>
+        <result property="posId" column="pos_id"/>
+        <result property="status" column="status"/>
+        <result property="rfid" column="rfid_num"/>
+    </resultMap>
+
+    <select id="queryTrayList" resultMap="trayMap">
+        select * from t_tray_info
+    </select>
+    <select id="queryById" resultMap="trayMap">
+        select * from t_tray_info where tray_id = #{id}
+    </select>
+    <select id="queryByPosId" resultMap="trayMap">
+        select t.* from t_tray_info t
+          left join t_pos_tray pt
+          on t.tray_id = pt.tray_id
+        where pt.pos_id = #{posid}
+    </select>
+</mapper>

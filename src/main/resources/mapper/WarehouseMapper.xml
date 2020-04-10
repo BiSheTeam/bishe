@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.WarehouseMapper">
+    <resultMap id="warehouseMap" type="team.bishe.wms.bean.Warehouse">
+        <id property="id" column="whouse_id"/>
+        <result property="name" column="whouse_nm" />
+        <result property="attribute" column="attribute" />
+        <result property="code" column="code" />
+        <result property="type" column="type" />
+        <result property="status" column="status" />
+        <result property="area" column="area" />
+        <result property="admin_id" column="admin_id" />
+        <result property="admin_nm" column="admin_nm" />
+        <result property="address" column="address" />
+        <!--<collection property="positions"  resultMap="team.bishe.wms.mapper.PositionMapper.positionMap" />-->
+    </resultMap>
+    <resultMap id="warehouseMap2" type="team.bishe.wms.bean.Warehouse">
+        <id property="id" column="whouse_id"/>
+        <result property="name" column="whouse_nm" />
+        <result property="attribute" column="attribute" />
+        <result property="code" column="code" />
+        <result property="type" column="type" />
+        <result property="status" column="status" />
+        <result property="area" column="area" />
+        <result property="admin_id" column="admin_id" />
+        <result property="admin_nm" column="admin_nm" />
+        <result property="address" column="address" />
+        <collection property="positions" column="{whid=whouse_id}"
+                    javaType="java.util.List"
+                    ofType="team.bishe.wms.bean.Position"
+                    select="team.bishe.wms.mapper.PositionMapper.queryByWhId"/>
+    </resultMap>
+    <select id="queryWarehouseList" resultMap="warehouseMap">
+        select * from t_warehouse_info
+    </select>
+    <select id="queryById" resultMap="warehouseMap2">
+        select * from t_warehouse_info where whouse_id = #{whid}
+    </select>
+</mapper>

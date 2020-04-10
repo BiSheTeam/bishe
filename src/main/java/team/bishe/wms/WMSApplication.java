@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
+@MapperScan("team.bishe.wms.mapper")
 @SpringBootApplication
 public class WMSApplication {
 
