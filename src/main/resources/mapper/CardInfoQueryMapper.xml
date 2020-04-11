@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.CardInfoQueryMapper">
+    <!--查询卡信息列表-->
+    <select id="cardInfoList" resultType="team.bishe.wms.bean.TcardInfo" parameterType="team.bishe.wms.pojo.CardQueryReq">
+        slelect f.* from
+        (select  ROWNUM rn e.*
+         from  (select
+            c.brh_id as brhId,
+            (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+            (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+            c.card_id as cardId,
+            c.start_dt as startDt,
+            c.card_sta as cardSta,
+            (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+            from t_card_info c
+            <include refid="sqlWhere"></include>
+            )e)f
+            where f.rn BETWEEN #{startRow} and #{endRow}
+
+    </select>
+    <!--查询卡信息列表总记录数-->
+    <select id="cardCount" resultType="java.lang.Integer" parameterType="team.bishe.wms.pojo.CardQueryReq">
+       select count(*)  from
+        (select
+        c.brh_id as brhId,
+        (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+        (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+        c.card_id as cardId,
+        c.start_dt as startDt,
+        c.card_sta as cardSta,
+        (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+        from t_card_info c
+        )e<include refid="sqlWhere"></include>
+    </select>
+
+    <!--查询卡信息详情-->
+    <select id="cardInfoDetail" resultType="team.bishe.wms.bean.TcardInfo" parameterType="team.bishe.wms.pojo.CardQueryReq">
+        select * from
+        (select
+        c.brh_id as brhId,
+        (select f.cust_lev from t_cif_basic f,t_cif_card_map m where f.cust_id = m.cust_id and m.card_id=#{cardId})as custLev,
+        (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+        (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+        c.card_id as cardId,
+        c.start_dt as startDt,
+        c.card_sta as cardSta,
+        (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+        from t_card_info c)e
+        <include refid="sqlWhere"></include>
+
+    </select>
+    <!--查询开卡信息列表-->
+    <select id="openCardList" resultType="team.bishe.wms.bean.TcardInfo">
+        slelect f.* from
+        (select  ROWNUM rn e.*
+        from  (select
+        c.brh_id as brhId,
+        (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+        (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+        c.card_id as cardId,
+        c.start_dt as startDt,
+        c.card_sta as cardSta,
+        (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+        from t_card_info c
+        )e
+        <include refid="sqlWhere1"></include>
+        )f
+        where f.rn BETWEEN #{startRow} and #{endRow}
+    </select>
+    <!--查询卡信息列表总记录数-->
+    <select id="openCardCount" resultType="java.lang.Integer" parameterType="team.bishe.wms.pojo.CardQueryReq">
+        select count(*)  from
+        (select
+        c.brh_id as brhId,
+        (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+        (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+        c.card_id as cardId,
+        c.start_dt as startDt,
+        c.card_sta as cardSta,
+        (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+        from t_card_info c
+        )e<include refid="sqlWhere1"></include>
+    </select>
+    <!--查询开卡信息详情-->
+    <select id="openCardDetail" resultType="team.bishe.wms.bean.TcardInfo">
+       select * from(select
+        c.brh_id as brhId,
+        (select b.brh_nm from t_brh_info b where c.brh_id = b.brh_id) as brhNm,
+        (select t.brand_desc from t_brand_info t where c.brand_id = t.brand_id) as brandNm,
+        c.card_id as cardId,
+        c.start_dt as startDt,
+        c.card_sta as cardSta,
+        (select p.pid_name from t_pid_basic p where c.card_id = p.card_id) as pidNm
+        from t_card_info c
+        )e
+        <include refid="sqlWhere"></include>
+
+    </select>
+
+    <sql id="sqlWhere">
+        where 1=1
+        <if test="cardId != null and cardId !=''">
+            and e.cardId=#{cardId}
+        </if>
+
+    </sql>
+    <sql id="sqlWhere1">
+        where 1=1
+        <if test="brhId != null and brhId !=''">
+            and e.brhId=#{brhId}
+        </if>
+        <if test="startDt!=null and startDt!=''">
+            <![CDATA[ and e.startDt>=#{startDt]]>
+        </if>
+
+        <if test="endDt!=null and endDt!=''">
+            <![CDATA[  and e.startDt<= #{endDt}]]>
+        </if>
+    </sql>
+</mapper>

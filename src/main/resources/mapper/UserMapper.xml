@@ -2,7 +2,40 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="team.bishe.wms.mapper.UserMapper">
-    <select id="queryUserList" resultType="team.bishe.wms.bean.User">
-        select * from user
+    <select id="findUserByName" resultType="team.bishe.wms.bean.User" parameterType="java.lang.String">
+        select u.user_name as userName
+                u.user_password as userPassword
+            from user u
+            where u.user_name=#{username,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="addUser" parameterType="team.bishe.wms.bean.User">
+        insert into
+        user(
+            user_name,
+            user_password,
+            user_gender,
+            user_phoneNumber,
+            user_email,
+            user_address,
+            user_tips,
+            user_group,
+            createtime
+        ) values(
+            #{username,jdbcType=VARCHAR},
+            #{userPassword,jdbcType=VARCHAR},
+            #{userGender,jdbcType=VARCHAR},
+            #{userPhoneNumber,jdbcType=VARCHAR},
+            #{userEmail,jdbcType=VARCHAR},
+            #{userAddress,jdbcType=VARCHAR},
+            #{userTips,jdbcType=VARCHAR},
+            #{userGroup,jdbcType=VARCHAR},
+            #{createTime,jdbcType=VARCHAR}
+        )
+    </insert>
+    <select id="findUserId" resultType="team.bishe.wms.bean.User" parameterType="team.bishe.wms.bean.User">
+        select u.user_id as userId
+            from user u
+            where u.user_name=#{userName,jdbcType=VARCHAR} and u.user_password=#{userPassword,jdbcType=VARCHAR}
     </select>
 </mapper>

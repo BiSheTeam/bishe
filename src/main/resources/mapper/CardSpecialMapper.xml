@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.CardSpecialMapper">
+    <!--特殊处理->卡挂失-->
+    <update id="cardLoss" parameterType="team.bishe.wms.pojo.CardSpecialReq">
+            update t_card_info
+            set card_sta = '挂失',remark = #{remark}
+            where card_id = #{cardId}
+    </update>
+
+    <!--特殊处理->卡解挂-->
+    <update id="cancelLoss" parameterType="team.bishe.wms.pojo.CardSpecialReq">
+            update t_card_info
+            set card_sta = '正常',remark = #{remark}
+            where card_id = #{cardId}
+    </update>
+
+    <!--特殊处理->卡延期-->
+    <update id="cardDelay" parameterType="team.bishe.wms.pojo.CardSpecialReq">
+            update t_card_info
+            set end_dt = #{timeData}
+            where card_id = #{cardId}
+    </update>
+
+    <!--特殊处理->退卡-->
+    <update id="cardRefund" parameterType="team.bishe.wms.pojo.CardSpecialReq">
+            update t_card_info
+            set card_sta = '销卡',remark = #{remark}
+            where card_id = #{cardId}
+    </update>
+
+    <!--根据卡号查询验证信息-->
+    <select id="queryValidatInfo" parameterType="team.bishe.wms.pojo.CardSpecialReq" resultType="team.bishe.wms.bean.TcifIdMap">
+            select
+            c.pid_type as pidType,
+            c.pid_cd as pidCd
+            from t_cif_id_map c,t_cif_card_map m
+            where card_id = #{cardId} and c.cust_id = m.cust_id
+    </select>
+</mapper>

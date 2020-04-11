@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.PickGoodInMapper">
+    <!--获取拣选对外返回参数-->
+    <insert id="makePickForm" parameterType="team.bishe.wms.bean.PickForm">
+        insert into
+            pick_form(
+            cust_id,
+            g_pos_id,
+            good_nm,
+            good_unit,
+            good_num,
+            pick_sta,
+            tray_id,
+            pick_mode
+            )values (
+            #{pickForm},
+            #{custId},
+            #{gPosId},
+            #{goodNm},
+            #{goodUnit},
+            #{goodNum},
+            #{pickSta},
+            #{trayId},
+            #{pickMode}
+            )
+    </insert>
+
+    <!--根据客户ID查询物品信息-->
+    <select id="queryGoodInfo" resultType="team.bishe.wms.bean.WgoodsInfo">
+        select  good_id as goodId,
+                good_nm as goodNm,
+                good_unit as goodUnit,
+                good_spec as goodSpec,
+                good_user as goodUser,
+                good_user_id as goodUserId,
+                type as type,
+                region as region,
+                number as number,
+                g_pos_id as gPosId
+                from w_goods_info w
+                where w.good_user_id = #{custId}
+    </select>
+
+    <!--查询拣货单-->
+    <select id="queryPickForm" resultType="team.bishe.wms.bean.PickForm">
+        select g_form_id as gFormId,
+                cust_id as custId,
+                g_pos_id as gPosId,
+                good_nm as goodNm,
+                good_num as goodNum,
+                pick_sta as pickSta,
+                pick_mode as pickMode
+                from pick_form p
+                where 1=1
+        <if test="custId != null and custId !=''">
+            and p.cust_id = #{custId}
+        </if>
+    </select>
+
+    <!--删除拣货单-->
+    <delete id="delPickForm" >
+        delete * from pick_form where g_form_id = #{gFormId}
+    </delete>
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.BusManageMapper">
+
+
+    <!--卡账户冻结-->
+    <update id="cardFrozen" parameterType="team.bishe.wms.pojo.BusManagementReq">
+        update t_cif_card_map
+        set sta = '停用'
+        where cust_id = #{custId} and card_id = #{cardId}
+    </update>
+    <!--卡账户解冻-->
+    <update id="cardThaw" parameterType="team.bishe.wms.pojo.BusManagementReq">
+        update t_cif_card_map
+        set sta = '正常'
+        where cust_id = #{custId} and card_id = #{cardId}
+    </update>
+</mapper>

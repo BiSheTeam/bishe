@@ -18,6 +18,10 @@ public class ApiResponse<T> {
         this.data = data;
     }
 
+    public ApiResponse() {
+
+    }
+
     public Integer getCode() {
         return code;
     }

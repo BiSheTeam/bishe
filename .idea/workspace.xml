@@ -1,7 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="" />
+    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="4.5修改">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/PickForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/BusManageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardQueryInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardSpecialController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/PickGoodInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/PickGoodOutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/BusManageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CardInfoQueryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CardSpecialMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/PickGoodInMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/PickGoodOutMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardQueryReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardQueryResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardSpecialReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/PickGoodInReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/PickGoodOutResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/BusManageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/CardSpecialService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/PickGoodInService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/PickGoodOutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/BusManageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/CardInfoQueryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/CardSpecialServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/PickGoodInServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/PickGoodOutServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/util/PagesUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BusManageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardInfoQueryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardSpecialMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PickGoodInMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PickGoodOutMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/MapperController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/UserQueryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/MapperController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warehouse-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-management-system.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +73,20 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ZhangChongkai" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -38,14 +108,27 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ams-release" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunManager">
     <configuration name="WMSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="warehouse-management-system" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.warehousemanagementsystem.WMSApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.wms.WMSApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WMSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="warehouse-management-system" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.wms.WMSApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,76 +179,172 @@
       <workItem from="1585897777102" duration="1003000" />
       <workItem from="1585900270033" duration="265000" />
       <workItem from="1585900547934" duration="11378000" />
+      <workItem from="1585922005626" duration="1940000" />
+      <workItem from="1586054564303" duration="2785000" />
+      <workItem from="1586312362910" duration="37236000" />
+      <workItem from="1586395487963" duration="14298000" />
+      <workItem from="1586439829981" duration="2051000" />
+      <workItem from="1586482605196" duration="9391000" />
+      <workItem from="1586492552560" duration="37426000" />
+      <workItem from="1586568319393" duration="13054000" />
+      <workItem from="1586587825782" duration="162000" />
+      <workItem from="1586588244480" duration="10822000" />
+      <workItem from="1586599838532" duration="173000" />
     </task>
+    <task id="LOCAL-00001" summary="4.5修改">
+      <created>1586057086212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586057086212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="4.5修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.5修改" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585900582564">
+    <state x="1047" y="202" key="#SQL_Dialects" timestamp="1586505205601">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900582564" />
-    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585900879842">
+    <state x="1047" y="202" key="#SQL_Dialects/62.0.1858.1080@62.0.1858.1080" timestamp="1586505205601" />
+    <state x="1145" y="303" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1586314165859">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1585900879842" />
+    <state x="1145" y="303" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586314165859" />
+    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586054673523">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586054673523" />
+    <state x="706" y="349" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586440027255">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="706" y="349" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1586440027255" />
+    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1586598141221">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1586598141221" />
+    <state x="757" y="326" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586054667495">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="757" y="326" key="#com.intellij.ide.util.TreeClassChooserDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586054667495" />
     <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585901750458">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585901750458" />
-    <state width="1815" height="332" key="GridCell.Tab.0.bottom" timestamp="1585918603176">
+    <state x="775" y="407" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586587974607">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.center" timestamp="1585918603176">
+    <state x="775" y="407" width="431" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/62.0.1858.1080@62.0.1858.1080" timestamp="1586587974607" />
+    <state x="377" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586509360387">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.left" timestamp="1585918603176">
+    <state x="377" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586509360387" />
+    <state x="603" y="136" key="CommitChangelistDialog2" timestamp="1586599942766">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.right" timestamp="1585918603176">
+    <state x="603" y="136" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1586599942766" />
+    <state x="240" y="96" key="DiffContextDialog" timestamp="1586057062402">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.bottom" timestamp="1585918603176">
+    <state x="240" y="96" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586057062402" />
+    <state x="771" y="298" key="FileChooserDialogImpl" timestamp="1586484546638">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.center" timestamp="1585918603176">
+    <state x="771" y="298" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1586484546638" />
+    <state width="1815" height="656" key="GridCell.Tab.0.bottom" timestamp="1586600397968">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.left" timestamp="1585918603176">
+    <state width="1815" height="656" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
+    <state width="1815" height="656" key="GridCell.Tab.0.center" timestamp="1586600397968">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.right" timestamp="1585918603176">
+    <state width="1815" height="656" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
+    <state width="1815" height="656" key="GridCell.Tab.0.left" timestamp="1586600397968">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
+    <state width="1815" height="656" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
+    <state width="1815" height="656" key="GridCell.Tab.0.right" timestamp="1586600397968">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="656" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
+    <state width="1815" height="656" key="GridCell.Tab.1.bottom" timestamp="1586600397969">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="656" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
+    <state width="1815" height="656" key="GridCell.Tab.1.center" timestamp="1586600397969">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="656" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
+    <state width="1815" height="656" key="GridCell.Tab.1.left" timestamp="1586600397969">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="656" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
+    <state width="1815" height="656" key="GridCell.Tab.1.right" timestamp="1586600397969">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="656" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
+    <state x="1035" y="281" key="IDE.errors.dialog" timestamp="1586487541502">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1035" y="281" key="IDE.errors.dialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586487541502" />
+    <state x="521" y="198" key="Maven.ArtifactSearchDialog" timestamp="1586352758055">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="521" y="198" key="Maven.ArtifactSearchDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586352758055" />
     <state x="562" y="205" key="Registry" timestamp="1585911137276">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="562" y="205" key="Registry/62.0.1858.1080@62.0.1858.1080" timestamp="1585911137276" />
-    <state x="494" y="185" key="SettingsEditor" timestamp="1585911093576">
+    <state x="686" y="74" width="1203" height="709" key="SettingsEditor" timestamp="1586600008596">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="494" y="185" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1585911093576" />
+    <state x="686" y="74" width="1203" height="709" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1586600008596" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1585922894243">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1585922894243" />
     <state x="790" y="321" key="chooseDestDirectoryDialog" timestamp="1585900097498">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="790" y="321" key="chooseDestDirectoryDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900097498" />
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1585900270127">
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586600253682">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900270127" />
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586600253682" />
+    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586315360804">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080@62.0.1858.1080" timestamp="1586315360804" />
+    <state x="721" y="311" key="extract.method.dialog" timestamp="1586591592784">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="721" y="311" key="extract.method.dialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586591592784" />
     <state x="611" y="129" width="759" height="822" key="find.popup" timestamp="1585900327440">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="611" y="129" width="759" height="822" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1585900327440" />
+    <state x="1118" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1586510285891">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1118" y="240" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1586510285891" />
   </component>
 </project>
