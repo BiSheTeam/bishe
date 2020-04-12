@@ -1,62 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="4.5修改">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_core_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_session_spring_session_data_redis_2_2_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/PickForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/BusManageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardQueryInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardSpecialController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/PickGoodInController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/PickGoodOutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/BusManageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CardInfoQueryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CardSpecialMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/PickGoodInMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/PickGoodOutMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardQueryReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardQueryResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/CardSpecialReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/PickGoodInReq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/pojo/PickGoodOutResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/BusManageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/CardSpecialService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/PickGoodInService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/PickGoodOutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/BusManageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/CardInfoQueryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/CardSpecialServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/PickGoodInServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/PickGoodOutServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/util/PagesUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BusManageMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardInfoQueryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CardSpecialMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PickGoodInMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PickGoodOutMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/MapperController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/UserQueryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/MapperController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/warehouse-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/warehouse-management-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/ApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardQueryInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardQueryInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/ApiController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -190,6 +140,8 @@
       <workItem from="1586587825782" duration="162000" />
       <workItem from="1586588244480" duration="10822000" />
       <workItem from="1586599838532" duration="173000" />
+      <workItem from="1586600253520" duration="291000" />
+      <workItem from="1586600561288" duration="2090000" />
     </task>
     <task id="LOCAL-00001" summary="4.5修改">
       <created>1586057086212</created>
@@ -198,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586057086212</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="RJ1.0提交">
+      <created>1586600454331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586600454331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +178,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="4.5修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="4.5修改" />
+    <MESSAGE value="RJ1.0提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="RJ1.0提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1047" y="202" key="#SQL_Dialects" timestamp="1586505205601">
@@ -258,10 +218,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="377" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586509360387" />
-    <state x="603" y="136" key="CommitChangelistDialog2" timestamp="1586599942766">
+    <state x="603" y="136" key="CommitChangelistDialog2" timestamp="1586600450113">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="603" y="136" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1586599942766" />
+    <state x="603" y="136" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1586600450113" />
     <state x="240" y="96" key="DiffContextDialog" timestamp="1586057062402">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -270,38 +230,38 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="298" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1586484546638" />
-    <state width="1815" height="656" key="GridCell.Tab.0.bottom" timestamp="1586600397968">
+    <state width="1815" height="14" key="GridCell.Tab.0.bottom" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
-    <state width="1815" height="656" key="GridCell.Tab.0.center" timestamp="1586600397968">
+    <state width="1815" height="14" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.0.center" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
-    <state width="1815" height="656" key="GridCell.Tab.0.left" timestamp="1586600397968">
+    <state width="1815" height="14" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.0.left" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
-    <state width="1815" height="656" key="GridCell.Tab.0.right" timestamp="1586600397968">
+    <state width="1815" height="14" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.0.right" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397968" />
-    <state width="1815" height="656" key="GridCell.Tab.1.bottom" timestamp="1586600397969">
+    <state width="1815" height="14" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.1.bottom" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
-    <state width="1815" height="656" key="GridCell.Tab.1.center" timestamp="1586600397969">
+    <state width="1815" height="14" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.1.center" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
-    <state width="1815" height="656" key="GridCell.Tab.1.left" timestamp="1586600397969">
+    <state width="1815" height="14" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.1.left" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
-    <state width="1815" height="656" key="GridCell.Tab.1.right" timestamp="1586600397969">
+    <state width="1815" height="14" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
+    <state width="1815" height="14" key="GridCell.Tab.1.right" timestamp="1586616343382">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="656" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586600397969" />
+    <state width="1815" height="14" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1586616343382" />
     <state x="1035" y="281" key="IDE.errors.dialog" timestamp="1586487541502">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -318,22 +278,22 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="686" y="74" width="1203" height="709" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1586600008596" />
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1585922894243">
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2" timestamp="1586600515113">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1585922894243" />
+    <state x="583" y="276" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1586600515113" />
     <state x="790" y="321" key="chooseDestDirectoryDialog" timestamp="1585900097498">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="790" y="321" key="chooseDestDirectoryDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900097498" />
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586600253682">
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586668705427">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586600253682" />
-    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586315360804">
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1586668705427" />
+    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586600615407">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080@62.0.1858.1080" timestamp="1586315360804" />
+    <state x="1250" y="462" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080@62.0.1858.1080" timestamp="1586600615407" />
     <state x="721" y="311" key="extract.method.dialog" timestamp="1586591592784">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -346,5 +306,16 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="1118" y="240" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1586510285891" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/CardQueryInfoController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

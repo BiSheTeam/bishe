@@ -9,7 +9,6 @@ import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.common.ApiResponse;
 import team.bishe.wms.pojo.CardQueryReq;
 import team.bishe.wms.pojo.CardQueryResp;
-import team.bishe.wms.pojo.CardSpecialReq;
 import team.bishe.wms.service.CardInfoQueryService;
 
 /**
