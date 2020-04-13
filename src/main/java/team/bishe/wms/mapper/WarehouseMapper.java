@@ -12,4 +12,6 @@ public interface WarehouseMapper {
     List<Warehouse> queryWarehouseList();
 
     Warehouse queryById(String whid);
+
+    List<Warehouse> queryPage(@Param("start") int start, @Param("num") int num);
 }

@@ -37,4 +37,8 @@
     <select id="queryById" resultMap="warehouseMap2">
         select * from t_warehouse_info where whouse_id = #{whid}
     </select>
+    <select id="queryPage" resultMap="warehouseMap">
+        select * from t_warehouse_info limit #{start}, #{num}
+    </select>
+
 </mapper>
