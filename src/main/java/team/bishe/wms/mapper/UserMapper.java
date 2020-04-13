@@ -1,6 +1,7 @@
 package team.bishe.wms.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import team.bishe.wms.bean.User;
 
@@ -17,7 +18,7 @@ public interface UserMapper {
      * @Param
      * @return
      */
-    public User findUserByName(String username);
+    public User findUserByName(@Param("username") String userName);
     /*
      * @Author RenJian
      * @Description 增加用户

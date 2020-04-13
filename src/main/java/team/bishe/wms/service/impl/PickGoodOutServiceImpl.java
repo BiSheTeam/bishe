@@ -6,6 +6,8 @@ import team.bishe.wms.mapper.PickGoodOutMapper;
 import team.bishe.wms.pojo.PickGoodOutResp;
 import team.bishe.wms.service.PickGoodOutService;
 
+import java.util.List;
+
 /**
  * @ClassName PickGoodOutServiceImpl
  * @Description
@@ -18,7 +20,7 @@ public class PickGoodOutServiceImpl implements PickGoodOutService {
     @Autowired
     private PickGoodOutMapper pickGoodOutMapper;
     @Override
-    public PickGoodOutResp pickGood(String pickMode) {
+    public List<PickGoodOutResp> pickGood(String pickMode) {
         return pickGoodOutMapper.pickGood(pickMode);
     }
 }

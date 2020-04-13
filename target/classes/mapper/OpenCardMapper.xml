@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.OpenCardMapper">
+
+
+    <!--单卡开卡-->
+    <update id="openCard" parameterType="team.bishe.wms.pojo.OpencardReq">
+        update t_card_info
+            set card_sta = '正常'
+            where card_id = #{cardId}
+    </update>
+    <!--增加客户证件信息-->
+    <insert id="addCustomerInfo" parameterType="team.bishe.wms.pojo.OpencardReq">
+        insert into
+            t_pid_basic(
+                card_id,
+                pid_type,
+                pid_cd,
+                pid_name
+            )values (
+                #{cardId},
+               '身份证',
+                #{idCardNo},
+                #{userName}
+            )
+
+    </insert>
+</mapper>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.CardDocMapper">
+<!--查询可用号段-->
+    <select id="queryUsabelNum" resultType="team.bishe.wms.bean.TcardUse">
+        select u.start_id as startId,
+                u.end_id as endId,
+                u.end_id - u.start_id+1 as count
+            from t_card_use u
+    </select>
+
+<!--卡档申请-->
+    <insert id="makeCardDoc" parameterType="team.bishe.wms.bean.TcardDoc">
+        insert into
+        t_card_doc(
+            brh_id,
+            app_opr_id,
+            app_dt,
+            audit_opr_id,
+            brand_id,
+            brand_nm,
+            card_type,
+            start_id,
+            end_id,
+            card_cnt,
+            value,
+            eff_term,
+            tot_value,
+            start_dt,
+            end_dt,
+            pay_mo,
+            card_brh_id,
+            flag,
+            stat,
+            last_upd_brh_id,
+            last_upd_opr_id,
+            last_upd_txn_cd,
+            last_upd_ts
+        )
+        values (
+            #{brhId},
+            #{appOprId},
+            #{appDt},
+            #{auditOprId},
+            #{brandId},
+            #{brandNm},
+            #{cardType},
+            #{startId},
+            #{endId},
+            #{cardCnt},
+            #{value},
+            #{effTerm},
+            #{totValue},
+            #{startDt},
+            #{endDt},
+            #{payMo},
+            #{cardBrhId},
+            #{flag},
+            #{stat},
+            #{lastUpdBrhId},
+            #{lastUpdOprId},
+            #{lastUpdTxnCd},
+            #{lastUpdTs}
+        )
+    </insert>
+    <!--查询卡品牌信息-->
+    <select id="queryCardBrandInfo" resultType="team.bishe.wms.bean.TbrandInfo">
+        select t.brand_id as brandId,
+                t.brand_desc as brandDesc
+            from t_brand_info t
+    </select>
+
+    <!--查询卡档信息-->
+    <select id="cardDocList" resultType="team.bishe.wms.bean.TcardDoc">
+        select
+            doc_app_id as docAppId,
+            app_dt as appDt,
+            brand_id as brandId,
+            brand_nm as brandNm,
+            card_type as cardType,
+            start_id as startId,
+            end_id as endId,
+            card_cnt as cardCnt,
+            value as value,
+            eff_term as effTerm,
+            pay_mo as payMo,
+            flag as flag,
+            stat as stat
+            from t_card_doc
+    </select>
+
+    <!--卡档申请信息撤销-->
+    <delete id="cardDocCancel">
+        delete
+        from t_card_doc
+        where
+            doc_app_id = #{docAppId}
+    </delete>
+
+    <!--卡档信息入库-->
+    <insert id="cardDocIndepot" parameterType="team.bishe.wms.bean.TcardInfo">
+        insert  into
+        t_card_info(
+            brh_id,
+            card_id,
+            brand_id,
+            buy_brh_id,
+            card_sta,
+            start_dt,
+            last_upd_brh_id,
+            last_upd_opr_id,
+            last_upd_ts
+        )values(
+            #{brhId},
+            #{cardId},
+            #{brandId},
+            #{buyBrhId},
+            #{cardSta},
+            #{startDt},
+            #{lastUpdBrhId},
+            #{lastUpdOprId},
+            #{lastUpdTs}
+        )
+    </insert>
+
+    <!--卡档入库后更新卡档状态-->
+    <update id="updateDocSta">
+        update t_card_doc
+            set stat = '已通过'
+            where doc_app_id = #{docAppId}
+    </update>
+
+    <!--拒绝卡档更新卡档状态-->
+    <update id="cardDocRefuse">
+                update t_card_doc
+            set stat = '已拒绝'
+            where doc_app_id = #{docAppId}
+    </update>
+
+    <!--查询拒绝卡档记录列表-->
+    <select id="cardDocRefList" resultType="team.bishe.wms.bean.TcardDoc">
+        select
+            doc_app_id as docAppId,
+            app_dt as appDt,
+            brand_nm as brandNm,
+            card_type as cardType,
+            start_id as startId,
+            end_id as endId,
+            card_cnt as cardCnt,
+            value as value,
+            eff_term as effTerm,
+            pay_mo as payMo,
+            flag as flag,
+            stat as stat
+            from t_card_doc
+            where stat = '已拒绝'
+    </select>
+</mapper>

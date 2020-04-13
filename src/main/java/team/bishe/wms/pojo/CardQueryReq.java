@@ -1,5 +1,7 @@
 package team.bishe.wms.pojo;
 
+import lombok.Data;
+
 /**
  * @ClassName CardQueryReq
  * @Description 信息查询请求参数
@@ -7,6 +9,7 @@ package team.bishe.wms.pojo;
  * @Date 2020/4/10 22:55
  * @Version 1.0
  **/
+@Data
 public class CardQueryReq {
     /*
      *卡号
@@ -40,22 +43,22 @@ public class CardQueryReq {
      *结束日期
      **/
     private String  endDt;
-    private String  startRow;
-    private String  endRow;
+    private Integer  startRow;
+    private Integer  endRow;
 
-    public String getStartRow() {
+    public Integer getStartRow() {
         return startRow;
     }
 
-    public void setStartRow(String startRow) {
+    public void setStartRow(Integer startRow) {
         this.startRow = startRow;
     }
 
-    public String getEndRow() {
+    public Integer getEndRow() {
         return endRow;
     }
 
-    public void setEndRow(String endRow) {
+    public void setEndRow(Integer endRow) {
         this.endRow = endRow;
     }
 

@@ -3,6 +3,8 @@ package team.bishe.wms.service;
 import org.springframework.stereotype.Service;
 import team.bishe.wms.pojo.CardSpecialReq;
 
+import java.text.ParseException;
+
 /*
  * @Author RenJian
  * @Description 卡特殊处理
@@ -26,7 +28,7 @@ public interface CardSpecialService {
      * @param
      * @return
      */
-    public void cardDelay   (CardSpecialReq cardSpecialReq);
+    public void cardDelay   (CardSpecialReq cardSpecialReq) throws ParseException;
     /**
      * 退卡
      * @param

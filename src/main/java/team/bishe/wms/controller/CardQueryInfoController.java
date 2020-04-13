@@ -41,6 +41,7 @@ public class CardQueryInfoController {
             apiResponse.setData(lists);
         } catch (Exception e) {
             log.error("调用查询卡信息列表接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }
@@ -59,6 +60,7 @@ public class CardQueryInfoController {
             apiResponse.setData(tcardInfo);
         } catch (Exception e) {
             log.error("调用查询卡信息详情接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }
@@ -77,6 +79,7 @@ public class CardQueryInfoController {
             apiResponse.setData(lists);
         } catch (Exception e) {
             log.error("调用查询开卡记录列表接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }
@@ -95,6 +98,7 @@ public class CardQueryInfoController {
             apiResponse.setData(tcardInfo);
         } catch (Exception e) {
             log.error("调用查询开卡记录列表详情接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }

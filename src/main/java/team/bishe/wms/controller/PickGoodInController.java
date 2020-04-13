@@ -23,7 +23,7 @@ import java.util.List;
 @Slf4j
 @ResponseBody
 @RestController
-@RequestMapping("pickGoodIn")
+@RequestMapping("/pickGoodIn")
 public class PickGoodInController {
 
     @Autowired
@@ -42,6 +42,7 @@ public class PickGoodInController {
             apiResponse.setMsg("新增成功");
         } catch (Exception e) {
             log.error("调用新增拣选货物单接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }
@@ -73,10 +74,14 @@ public class PickGoodInController {
         ApiResponse apiResponse = new ApiResponse<>();
         try {
             log.info("调用删除拣选货物单接口");
+            pickGoodInService.delPickForm(gFormId);
             apiResponse.setCode(200);
             apiResponse.setMsg("删除拣货单成功");
         } catch (Exception e) {
+            apiResponse.setCode(401);
+            apiResponse.setMsg("删除拣货单失败");
             log.error("调用删除拣选货物单接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }

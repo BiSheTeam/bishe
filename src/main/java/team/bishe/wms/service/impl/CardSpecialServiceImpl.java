@@ -1,11 +1,16 @@
 package team.bishe.wms.service.impl;
 
+import com.sun.deploy.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import team.bishe.wms.bean.TcifIdMap;
 import team.bishe.wms.mapper.CardSpecialMapper;
 import team.bishe.wms.pojo.CardSpecialReq;
 import team.bishe.wms.service.CardSpecialService;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @ClassName CardSpecialServiceImpl
@@ -26,7 +31,7 @@ public class CardSpecialServiceImpl implements CardSpecialService {
     @Override
     public void cardLoss(CardSpecialReq cardSpecialReq) {
         TcifIdMap info = cardSpecialMapper.queryValidatInfo(cardSpecialReq);
-        if (info.getPidCd() == cardSpecialReq.getVerData() && info.getPidType() == cardSpecialReq.getVerType()){
+        if (info.getPidCd().equals(cardSpecialReq.getVerData()) && info.getPidType().equals(cardSpecialReq.getVerType())){
             cardSpecialMapper.cardLoss(cardSpecialReq);
         }
     }
@@ -39,7 +44,7 @@ public class CardSpecialServiceImpl implements CardSpecialService {
     @Override
     public void cancelLoss(CardSpecialReq cardSpecialReq) {
         TcifIdMap info = cardSpecialMapper.queryValidatInfo(cardSpecialReq);
-        if (info.getPidCd() == cardSpecialReq.getVerData() && info.getPidType() == cardSpecialReq.getVerType()){
+        if (info.getPidCd().equals(cardSpecialReq.getVerData()) && info.getPidType().equals(cardSpecialReq.getVerType())){
             cardSpecialMapper.cancelLoss(cardSpecialReq);
         }
     }
@@ -50,8 +55,11 @@ public class CardSpecialServiceImpl implements CardSpecialService {
      * @return
      */
     @Override
-    public void cardDelay(CardSpecialReq cardSpecialReq) {
-        cardSpecialMapper.cardDelay(cardSpecialReq);
+    public void cardDelay(CardSpecialReq cardSpecialReq) throws ParseException {
+        TcifIdMap info = cardSpecialMapper.queryValidatInfo(cardSpecialReq);
+        if (info.getPidCd().equals(cardSpecialReq.getVerData()) && info.getPidType().equals(cardSpecialReq.getVerType())){
+            cardSpecialMapper.cardDelay(cardSpecialReq);
+        }
     }
 
     /**
@@ -62,7 +70,7 @@ public class CardSpecialServiceImpl implements CardSpecialService {
     @Override
     public void cardRefund(CardSpecialReq cardSpecialReq) {
         TcifIdMap info = cardSpecialMapper.queryValidatInfo(cardSpecialReq);
-        if (info.getPidCd() == cardSpecialReq.getVerData() && info.getPidType() == cardSpecialReq.getVerType()){
+        if (info.getPidCd().equals(cardSpecialReq.getVerData()) && info.getPidType().equals(cardSpecialReq.getVerType())){
             cardSpecialMapper.cardRefund(cardSpecialReq);
         }
     }

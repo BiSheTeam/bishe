@@ -9,6 +9,8 @@ import team.bishe.wms.common.ApiResponse;
 import team.bishe.wms.pojo.PickGoodOutResp;
 import team.bishe.wms.service.PickGoodOutService;
 
+import java.util.List;
+
 /**
  * @ClassName PickGoodOut
  * @Description 拣选物品对外接口
@@ -29,15 +31,17 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/conveSystem")
     public ApiResponse conveSystem(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<PickGoodOutResp>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<List<PickGoodOutResp>>();
         try {
+            System.out.println(pickMode);
             log.info("调取输送系统整箱拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
             log.error("输送系统整箱拣选对外保留接口失败",e.getMessage());
+            e.printStackTrace();
         }
         return apiResponse;
     }
@@ -47,10 +51,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/pallPack")
     public ApiResponse pallPack(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<PickGoodOutResp>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<List<PickGoodOutResp>>();
         try {
             log.info("调取托盘整箱拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
@@ -65,10 +69,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/autoMixbox")
     public ApiResponse autoMixbox(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<PickGoodOutResp>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<List<PickGoodOutResp>>();
         try {
             log.info("调取自动混箱拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
@@ -83,10 +87,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/colony")
     public ApiResponse colony(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<PickGoodOutResp>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<List<PickGoodOutResp>>();
         try {
             log.info("调取集群拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
@@ -101,10 +105,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/batchSort")
     public ApiResponse batchSort(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<PickGoodOutResp>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<List<PickGoodOutResp>>();
         try {
             log.info("调取批量分拣对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
@@ -119,10 +123,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/devRobot")
     public ApiResponse devRobot(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<>();
         try {
             log.info("调取货到机器人拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
@@ -137,10 +141,10 @@ public class PickGoodOutController {
      **/
     @RequestMapping("/regionRoute")
     public ApiResponse regionRoute(String pickMode){
-        ApiResponse<PickGoodOutResp> apiResponse = new ApiResponse<>();
+        ApiResponse<List<PickGoodOutResp>> apiResponse = new ApiResponse<>();
         try {
             log.info("调取托盘整箱拣选对外保留接口");
-            PickGoodOutResp resp = pickGoodOutService.pickGood(pickMode);
+            List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
             apiResponse.setCode(200);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);

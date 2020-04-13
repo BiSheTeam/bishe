@@ -8,6 +8,7 @@ import team.bishe.wms.pojo.CardQueryReq;
 import team.bishe.wms.pojo.CardQueryResp;
 import team.bishe.wms.service.CardInfoQueryService;
 import team.bishe.wms.util.PagesUtil;
+import team.bishe.wms.util.TimeTrans;
 
 import java.util.List;
 
@@ -59,7 +60,12 @@ public class CardInfoQueryServiceImpl implements CardInfoQueryService {
      */
     @Override
     public CardQueryResp<TcardInfo> openCardList(CardQueryReq cardQueryReq) {
+        TimeTrans timeTrans = new TimeTrans();
         CardQueryResp<TcardInfo> resp = new CardQueryResp<>();
+        String startDt = timeTrans.intDateFormat("yyyyMMdd", cardQueryReq.getStartDt());
+        String endDt = timeTrans.intDateFormat("yyyyMMdd", cardQueryReq.getEndDt());
+        cardQueryReq.setEndDt(endDt);
+        cardQueryReq.setStartDt(startDt);
         Integer count = cardInfoQueryMapper.openCardCount(cardQueryReq);
         resp.setRecords(count);
         PagesUtil.pages().pageParam(cardQueryReq);

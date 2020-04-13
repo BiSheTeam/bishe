@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="team.bishe.wms.mapper.UserMapper">
-    <select id="findUserByName" resultType="team.bishe.wms.bean.User" parameterType="java.lang.String">
-        select u.user_name as userName
+    <select id="findUserByName" resultType="team.bishe.wms.bean.User">
+        select u.user_name as userName,
                 u.user_password as userPassword
             from user u
-            where u.user_name=#{username,jdbcType=VARCHAR}
+            where u.user_name=#{username}
     </select>
 
     <insert id="addUser" parameterType="team.bishe.wms.bean.User">
@@ -20,9 +20,9 @@
             user_address,
             user_tips,
             user_group,
-            createtime
+            cratetime
         ) values(
-            #{username,jdbcType=VARCHAR},
+            #{userName,jdbcType=VARCHAR},
             #{userPassword,jdbcType=VARCHAR},
             #{userGender,jdbcType=VARCHAR},
             #{userPhoneNumber,jdbcType=VARCHAR},
