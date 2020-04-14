@@ -1,6 +1,8 @@
 package team.bishe.wms.bean;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -16,5 +18,12 @@ public class Position {
     private String status;
     //托盘
     private List<Tray> trays;
+
+    @Setter
+    @Getter
+    private static int COUNT;
+    @Setter
+    @Getter
+    private static boolean UPDATED = true;
 }
 

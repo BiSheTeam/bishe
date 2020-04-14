@@ -11,24 +11,48 @@
     </resultMap>
     <resultMap id="positionMap2" type="team.bishe.wms.bean.Position">
         <id property="id" column="pos_id"/>
-        <result property="num" column="pos_num"/>
         <result property="name" column="pos_nm"/>
+        <result property="num" column="pos_num"/>
         <result property="status" column="status"/>
         <collection property="trays" column="{posid=pos_id}"
                     javaType="java.util.List"
                     ofType="team.bishe.wms.bean.Tray"
                     select="team.bishe.wms.mapper.TrayMapper.queryByPosId" />
     </resultMap>
+    <insert id="insert" parameterType="team.bishe.wms.bean.Position">
+        insert into t_position_info(pos_id, pos_nm, pos_num, status)
+        values (#{id}, #{name}, #{num}, #{status});
+    </insert>
+    <insert id="setNewPosWh" >
+        insert into t_wh_position(whouse_id, pos_id)
+        values(#{whid},#{posid});
+    </insert>
+    <update id="update" parameterType="team.bishe.wms.bean.Position">
+        update t_position_info
+        set pos_nm  = #{name},
+            pos_num = #{num},
+            status  = #{status}
+        where pos_id = #{id};
+    </update>
+    <delete id="deleteById" parameterType="string">
+        delete from t_position_info where pos_id = #{id};
+    </delete>
     <select id="queryPositionList" resultMap="positionMap">
-        select * from t_position_info
+        select * from t_position_info;
     </select>
     <select id="queryById" resultMap="positionMap2">
-        select * from t_position_info where pos_id = #{posid}
+        select * from t_position_info where pos_id = #{posid};
     </select>
     <select id="queryByWhId" resultMap="positionMap">
         select p.* from t_position_info p
           left join t_wh_position wp
           on p.pos_id = wp.pos_id
-        where whouse_id = #{whid}
+        where whouse_id = #{whid};
+    </select>
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(*) from t_position_info;
+    </select>
+    <select id="queryPage" resultMap="positionMap">
+        select * from t_position_info limit #{start}, #{num};
     </select>
 </mapper>

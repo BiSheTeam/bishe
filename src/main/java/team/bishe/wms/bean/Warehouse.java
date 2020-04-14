@@ -1,6 +1,8 @@
 package team.bishe.wms.bean;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -28,5 +30,12 @@ public class Warehouse {
     private String address;
     //仓位
     private List<Position> positions;
+
+    @Setter
+    @Getter
+    private static int COUNT;
+    @Setter
+    @Getter
+    private static boolean UPDATED = true;
 
 }

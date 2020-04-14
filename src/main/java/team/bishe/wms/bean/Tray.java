@@ -1,6 +1,8 @@
 package team.bishe.wms.bean;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 public class Tray {
@@ -16,5 +18,12 @@ public class Tray {
     private String status;
     //RFID编号
     private String rfid;
+
+    @Setter
+    @Getter
+    private static int COUNT;
+    @Setter
+    @Getter
+    private static boolean UPDATED = true;
 }
 

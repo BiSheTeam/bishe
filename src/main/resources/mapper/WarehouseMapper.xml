@@ -31,14 +31,39 @@
                     ofType="team.bishe.wms.bean.Position"
                     select="team.bishe.wms.mapper.PositionMapper.queryByWhId"/>
     </resultMap>
+    <insert id="insert" parameterType="team.bishe.wms.bean.Warehouse">
+        insert into t_warehouse_info(whouse_id, whouse_nm, attribute, code, type, status, area, admin_id, admin_nm,
+                                     address)
+        values (#{id}, #{name}, #{attribute}, #{code}, #{type}, #{status}, #{area}, #{admin_id}, #{admin_nm},
+                #{address});
+    </insert>
+    <update id="updateWarehouse" parameterType="team.bishe.wms.bean.Warehouse">
+        update t_warehouse_info
+        set whouse_nm = #{name},
+            attribute = #{attribute},
+            code      = #{code},
+            type      = #{type},
+            status    = #{status},
+            area      = #{area},
+            admin_id  = #{admin_id},
+            admin_nm  = #{admin_nm},
+            address   = #{address}
+        where whouse_id = #{id};
+    </update>
+    <delete id="deleteById" parameterType="string">
+        delete from t_warehouse_info where whouse_id = #{id};
+    </delete>
     <select id="queryWarehouseList" resultMap="warehouseMap">
-        select * from t_warehouse_info
+        select * from t_warehouse_info;
     </select>
     <select id="queryById" resultMap="warehouseMap2">
-        select * from t_warehouse_info where whouse_id = #{whid}
+        select * from t_warehouse_info where whouse_id = #{whid};
     </select>
     <select id="queryPage" resultMap="warehouseMap">
-        select * from t_warehouse_info limit #{start}, #{num}
+        select * from t_warehouse_info limit #{start}, #{num};
+    </select>
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(*) from t_warehouse_info;
     </select>
 
 </mapper>

@@ -10,17 +10,42 @@
         <result property="status" column="status"/>
         <result property="rfid" column="rfid_num"/>
     </resultMap>
+    <insert id="insert" parameterType="team.bishe.wms.bean.Tray">
+        insert into t_tray_info(tray_id, tray_num, pos_nm, pos_id, status, rfid_num)
+        values (#{id}, #{num}, #{posName}, #{posId}, #{status}, #{rfid})
+    </insert>
+    <update id="update" parameterType="team.bishe.wms.bean.Tray">
+        update t_tray_info
+        set tray_num = #{num},
+            pos_nm   = #{posName},
+            pos_id   = #{posId},
+            status   = #{status},
+            rfid_num = #{rfid}
+        where tray_id = #{id};
+    </update>
+    <insert id="setNewPosWh">
+        insert into t_pos_tray(tray_id, pos_id) VALUES (#{trayid}, #{posid})
+    </insert>
+    <delete id="deleteById" parameterType="string">
+        delete from t_tray_info where tray_id = #{id};
+    </delete>
 
     <select id="queryTrayList" resultMap="trayMap">
-        select * from t_tray_info
+        select * from t_tray_info;
     </select>
     <select id="queryById" resultMap="trayMap">
-        select * from t_tray_info where tray_id = #{id}
+        select * from t_tray_info where tray_id = #{id};
     </select>
     <select id="queryByPosId" resultMap="trayMap">
         select t.* from t_tray_info t
           left join t_pos_tray pt
           on t.tray_id = pt.tray_id
-        where pt.pos_id = #{posid}
+        where pt.pos_id = #{posid};
+    </select>
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(*) from t_tray_info;
+    </select>
+    <select id="queryPage" resultType="team.bishe.wms.bean.Tray">
+        select * from t_tray_info limit #{start}, #{num};
     </select>
 </mapper>
