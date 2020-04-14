@@ -29,4 +29,8 @@ public interface PositionMapper {
     int insert(Position position);
 
     int setNewPosWh(@Param("posid") String posid, @Param("whid") String whid);
+
+    int queryTrayCount(String id);
+
+    int deleteWhPos(String id);
 }

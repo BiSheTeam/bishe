@@ -22,13 +22,14 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     /**
      * 分页擦查询
+     *
      * @param page 第几页
-     * @param num 每页多少数据
+     * @param num  每页多少数据
      * @return 仓库结果集
      */
     @Override
     public List<Warehouse> queryPage(int page, int num) {
-        if(Warehouse.isUPDATED()) {
+        if (Warehouse.isUPDATED()) {
             Warehouse.setCOUNT(warehouseMapper.queryCount());
             Warehouse.setUPDATED(true);
         }
@@ -48,6 +49,10 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     @Override
     public int deleteById(String id) {
+        //查询仓库是否有仓位
+        //有则返回-1
+        if (warehouseMapper.queryPosCount(id) != 0) return -1;
+        //无则删除并返回
         return warehouseMapper.deleteById(id);
     }
 

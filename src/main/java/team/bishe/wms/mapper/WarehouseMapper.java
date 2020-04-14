@@ -22,4 +22,6 @@ public interface WarehouseMapper {
     int deleteById(String id);
 
     int insert(Warehouse warehouse);
+
+    int queryPosCount(String id);
 }

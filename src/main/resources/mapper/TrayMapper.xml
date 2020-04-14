@@ -23,11 +23,24 @@
             rfid_num = #{rfid}
         where tray_id = #{id};
     </update>
+    <update id="updatePosTray">
+        update t_pos_tray
+        set pos_id = #{posid}
+        where tray_id = #{trayid};
+    </update>
+    <update id="updateTpid">
+        update t_tray_info
+        set pos_id = #{posid}
+        where tray_id = #{trayid};
+    </update>
     <insert id="setNewPosWh">
         insert into t_pos_tray(tray_id, pos_id) VALUES (#{trayid}, #{posid})
     </insert>
     <delete id="deleteById" parameterType="string">
         delete from t_tray_info where tray_id = #{id};
+    </delete>
+    <delete id="deletePosWh">
+        delete from t_pos_tray where tray_id = #{id};
     </delete>
 
     <select id="queryTrayList" resultMap="trayMap">

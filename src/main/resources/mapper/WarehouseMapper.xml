@@ -65,5 +65,10 @@
     <select id="queryCount" resultType="java.lang.Integer">
         select count(*) from t_warehouse_info;
     </select>
+    <select id="queryPosCount" resultType="java.lang.Integer">
+        select count(*)
+        from t_wh_position
+        where whouse_id = #{id};
+    </select>
 
 </mapper>

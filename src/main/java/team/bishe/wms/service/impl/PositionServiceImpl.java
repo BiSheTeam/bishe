@@ -42,6 +42,9 @@ public class PositionServiceImpl implements PositionService {
 
     @Override
     public int deleteById(String id) {
+        if (positionMapper.queryTrayCount(id) != 0) return -1;
+        //在中间表中删除此仓位记录
+        positionMapper.deleteWhPos(id);
         return positionMapper.deleteById(id);
     }
 

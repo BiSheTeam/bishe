@@ -20,22 +20,22 @@ public class TrayController {
     private TrayService trayService;
 
     @GetMapping("/tray")
-    public ApiResponse<List<Tray>> querytray(){
+    public ApiResponse<List<Tray>> querytray() {
         List<Tray> tray = trayService.queryTrayList();
-        return new ApiResponse<List<Tray>>(1,"OK",tray);
+        return new ApiResponse<List<Tray>>(1, "OK", tray);
     }
 
     @GetMapping("/tray/{id}")
-    public ApiResponse<Tray> queryWhById(@PathVariable("id") String id){
+    public ApiResponse<Tray> queryWhById(@PathVariable("id") String id) {
         Tray tray = trayService.queryById(id);
-        return new ApiResponse<Tray>(1,"OK",tray);
+        return new ApiResponse<Tray>(1, "OK", tray);
     }
 
     @GetMapping("/tray/{page}/{num}")
     public ApiResponse<List<Tray>> queryPage(@PathVariable("page") int page,
-                                       @PathVariable("num") int num){
+                                             @PathVariable("num") int num) {
         List<Tray> trays = trayService.queryPage(page, num);
-        return new ApiResponse<List<Tray>>(1,"OK",trays);
+        return new ApiResponse<List<Tray>>(1, "OK", trays);
     }
 
     @PutMapping("/tray")
@@ -63,5 +63,13 @@ public class TrayController {
         Tray.setUPDATED(false);
         Tray tray1 = trayService.queryById(tray.getId());
         return new ApiResponse<Tray>(1, "OK", tray1);
+    }
+
+    //修改托盘所在的仓位
+    @PutMapping("/tray/{tid}/{posid}")
+    public ApiResponse<String> updatePosTray(@PathVariable("id") String trayid, @PathVariable("posid") String posid) {
+        int n = trayService.updatePosTray(trayid, posid);
+        if(n == 0) return new ApiResponse<String>(400, "移仓失败", null);
+        return new ApiResponse<String>(400, "移仓失败", null);
     }
 }

@@ -40,6 +40,8 @@ public class TrayServiceImpl implements TrayService {
 
     @Override
     public int deleteById(String id) {
+        //删除中间表中此托盘的记录
+        trayMapper.deletePosWh(id);
         return trayMapper.deleteById(id);
     }
 
@@ -48,5 +50,11 @@ public class TrayServiceImpl implements TrayService {
         int n = trayMapper.insert(tray);
         trayMapper.setNewPosWh(tray.getId(), posid);
         return n;
+    }
+
+    @Override
+    public int updatePosTray(String trayid, String posid) {
+        if(trayMapper.updatePosTray(trayid,posid) == 0) return 0;
+        return trayMapper.updateTpid(trayid,posid);
     }
 }

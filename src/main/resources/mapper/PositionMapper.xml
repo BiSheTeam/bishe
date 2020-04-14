@@ -37,6 +37,9 @@
     <delete id="deleteById" parameterType="string">
         delete from t_position_info where pos_id = #{id};
     </delete>
+    <delete id="deleteWhPos">
+        delete from t_wh_position where pos_id = #{id};
+    </delete>
     <select id="queryPositionList" resultMap="positionMap">
         select * from t_position_info;
     </select>
@@ -54,5 +57,10 @@
     </select>
     <select id="queryPage" resultMap="positionMap">
         select * from t_position_info limit #{start}, #{num};
+    </select>
+    <select id="queryTrayCount" resultType="java.lang.Integer">
+        select count(*)
+        from t_pos_tray
+        where pos_id = #{id};
     </select>
 </mapper>

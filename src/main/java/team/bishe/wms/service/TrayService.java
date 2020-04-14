@@ -16,4 +16,6 @@ public interface TrayService {
     int deleteById(String id);
 
     int insert(Tray tray, String posid);
+
+    int updatePosTray(String trayid, String posid);
 }

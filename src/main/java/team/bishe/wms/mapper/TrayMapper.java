@@ -25,4 +25,10 @@ public interface TrayMapper {
     int insert(Tray tray);
 
     int setNewPosWh(@Param("trayid") String trayid, @Param("posid") String posid);
+
+    int updatePosTray(@Param("trayid") String trayid, @Param("posid") String posid);
+
+    int updateTpid(@Param("trayid") String trayid, @Param("posid") String posid);
+
+    void deletePosWh(String id);
 }

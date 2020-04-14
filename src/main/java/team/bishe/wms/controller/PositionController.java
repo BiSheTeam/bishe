@@ -49,6 +49,7 @@ public class PositionController {
     @ResponseBody
     public ApiResponse<String> deleteById(@PathVariable String id) {
         int n = positionService.deleteById(id);
+        if (n == -1) return new ApiResponse<String>(400, "此仓位存在托盘，无法删除", null);
         if (n == 0) return new ApiResponse<String>(400, "删除失败", null);
         Position.setUPDATED(false);
         return new ApiResponse<String>(1, "OK", "成功删除" + n + "条");
