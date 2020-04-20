@@ -6,7 +6,7 @@ import team.bishe.wms.bean.User;
 
 import java.util.List;
 
-
+@Component
 @Mapper
 public interface UserMapper {
     public List<User> queryUserList();

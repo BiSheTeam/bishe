@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="team.bishe.wms.mapper.ApplicationMapper">
+    <resultMap id="application" type="team.bishe.wms.bean.Application">
+        <id property="id" column="application_id"/>
+        <result property="cusId" column="customer_id"/>
+        <result property="cusName" column="customer_name"/>
+        <result property="goodsName" column="good_name"/>
+        <result property="goodsType" column="good_type"/>
+        <result property="number" column="number"/>
+        <result property="applicationDate" column="date"/>
+        <result property="repositoryId" column="repository_id"/>
+		<result property="state" column="state"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="application">
+        select
+        	 a.application_id,
+        	 a.customer_id,
+        	 a.customer_name,
+        	 a.good_name,
+        	 a.good_type,
+        	 a.number,
+        	 a.date,
+        	 a.repository_id
+
+        from
+        	t_shstock_in_application a
+    </select>
+
+    <select id="selectByDate" resultMap="application">
+		select
+			 a.application_id,
+        	 a.customer_id,
+        	 a.customer_name,
+        	 a.good_name,
+        	 a.good_type,
+        	 a.number,
+        	 a.date,
+        	 a.repository_id
+		from
+			t_shstock_in_application a
+		where
+			a.date between #{startDate} and #{endDate}
+	</select>
+
+    <select id="selectByUserId" resultMap="application">
+		select
+			 a.application_id,
+        	 a.customer_id,
+        	 a.customer_name,
+        	 a.good_name,
+        	 a.good_type,
+        	 a.number,
+        	 a.date,
+        	 a.repository_id
+		from
+			t_shstock_in_application a
+		where
+			a.customer_id = #{cusid}
+	</select>
+
+    <select id="selectById" resultMap="application">
+		select
+			 a.application_id,
+        	 a.customer_id,
+        	 a.customer_name,
+        	 a.good_name,
+        	 a.good_type,
+        	 a.number,
+        	 a.date,
+        	 a.repository_id
+		from
+			t_shstock_in_application a
+		where
+			a.application_id = #{id}
+	</select>
+
+	<select id="selectNumByName" resultMap="application">
+		select
+			a.number
+		from
+			t_shstock_in_application a
+		where
+			a.GOODS_NAME = #{goodsName}
+	</select>
+
+    <insert id="insert">
+		insert into
+				t_shstock_in_application(
+				CUSTOMER_ID,
+				CUSTOMER_NAME,
+				GOOD_NAME,
+				GOOD_TYPE,
+				NUMBER,
+				DATE,
+				REPOSITORY_ID)
+		values
+				(#{cusId},#{cusName},#{goodsName},#{goodsType},#{number},#{applicationDate},#{repositoryId})
+	</insert>
+
+	<update id="update">
+		update t_shstock_in_application a
+		set a.goodsName = #{goodsName},a.goodsType = #{goodsType},a.goods_num = #{number}
+		where a.application_id = #{id}
+	</update>
+	<update id="updateState">
+		update t_shstock_in_application a
+		set a.state = '作废'
+		where a.application_id = #{applicationId}
+	</update>
+
+	<delete id="deleteById">
+    	delete from t_shstock_in_application
+    	where id = #{id}
+    </delete>
+</mapper>

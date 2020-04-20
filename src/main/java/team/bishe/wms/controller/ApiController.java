@@ -19,10 +19,10 @@ public class ApiController {
     @RequestMapping(value = "/exception",method = RequestMethod.GET)
     public ApiResponse testExceptionHandle(){
         try {
-            int i =10/0;
+            log.info("查询  ，/");
         } catch (Exception e) {
             log.error("处理信息一场，/api/exception  error:{}",e.getMessage());
         }
-        return  new ApiResponse<String>(9999,"OK",null);
+        return  new ApiResponse<String>(9999,"OK","suiyi");
     }
 }

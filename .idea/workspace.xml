@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="" />
+    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/MapperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/MapperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/bean/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/config/SwaggerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/ApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/MapperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/controller/MapperController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/mapper/UserMapper.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +28,9 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="206" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -18,15 +40,32 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ZhangChongkai" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="D:/worksoft/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\worksoft\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="1a1JQPOn0Z0MlQ9dRAv4Vj5dqus" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="添加" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,12 +79,46 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Graduation project\bishe\src\main\resources\mapper" />
+      <recent name="D:\Graduation project\bishe\src\main\java\team\bishe\wms\Exception" />
+      <recent name="D:\Graduation project\bishe\src\main\java\team\bishe\wms\bean" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WMSApplication">
+    <configuration name="WMSApplication " type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="warehouse-management-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team.bishe.wms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.wms.WMSApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WMSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="warehouse-management-system" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.warehousemanagementsystem.WMSApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.wms.WMSApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,9 +137,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_bishe" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65376" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.WMSApplication" />
+        <item itemvalue="Spring Boot.WMSApplication " />
       </list>
     </recent_temporary>
   </component>
@@ -75,7 +210,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="配置" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -96,76 +241,171 @@
       <workItem from="1585897777102" duration="1003000" />
       <workItem from="1585900270033" duration="265000" />
       <workItem from="1585900547934" duration="11378000" />
+      <workItem from="1586008491835" duration="2071000" />
+      <workItem from="1586015860173" duration="101000" />
+      <workItem from="1586056993846" duration="3595000" />
+      <workItem from="1586061376202" duration="5135000" />
+      <workItem from="1586067546055" duration="1612000" />
+      <workItem from="1586072807267" duration="5443000" />
+      <workItem from="1586140810926" duration="6182000" />
+      <workItem from="1586222411268" duration="36227000" />
+      <workItem from="1586311756286" duration="7214000" />
+      <workItem from="1586336252912" duration="1616000" />
+      <workItem from="1586344404174" duration="3550000" />
+      <workItem from="1586389922664" duration="586000" />
+      <workItem from="1586574052951" duration="10207000" />
+      <workItem from="1586655148519" duration="3938000" />
+      <workItem from="1586786277279" duration="3210000" />
+      <workItem from="1586835033982" duration="11924000" />
+      <workItem from="1587041921343" duration="2176000" />
+      <workItem from="1587114193191" duration="10332000" />
+      <workItem from="1587130107542" duration="862000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585900582564">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="361" y="74" key="#Inspections" timestamp="1586787439394">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1586787439394" />
+    <state x="361" y="74" key="#Notifications" timestamp="1586057350011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1586057350011" />
+    <state x="407" y="64" key="#WMSApplication_" timestamp="1586073897886">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="64" key="#WMSApplication_/0.0.1536.824@0.0.1536.824" timestamp="1586073897886" />
+    <state x="254" y="82" width="965" height="646" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586074047094">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="254" y="82" width="965" height="646" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586074047094" />
     <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900582564" />
-    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585900879842">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="607" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1587126006596">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="607" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1587126006596" />
     <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1585900879842" />
-    <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585901750458">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="441" y="357" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586015675637">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="441" y="357" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1586015675637" />
     <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585901750458" />
-    <state width="1815" height="332" key="GridCell.Tab.0.bottom" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="331" y="113" key="FileChooserDialogImpl" timestamp="1586579203168">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="331" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586579203168" />
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.center" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.left" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.right" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.bottom" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.1.bottom" timestamp="1586274157083">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586274157083" />
     <state width="1815" height="332" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.center" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.1.center" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.left" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.1.left" timestamp="1586274157082">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586274157082" />
     <state width="1815" height="332" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.right" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="1493" height="171" key="GridCell.Tab.1.right" timestamp="1586274157083">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="171" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586274157083" />
     <state width="1815" height="332" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
     <state x="562" y="205" key="Registry" timestamp="1585911137276">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="562" y="205" key="Registry/62.0.1858.1080@62.0.1858.1080" timestamp="1585911137276" />
-    <state x="494" y="185" key="SettingsEditor" timestamp="1585911093576">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="347" y="0" key="SettingsEditor" timestamp="1586361259413">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="347" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586361259413" />
     <state x="494" y="185" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1585911093576" />
+    <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1586233819476">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1586233819476" />
     <state x="790" y="321" key="chooseDestDirectoryDialog" timestamp="1585900097498">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="790" y="321" key="chooseDestDirectoryDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900097498" />
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1585900270127">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="513" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1587371956072">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="513" y="281" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587371956072" />
     <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900270127" />
-    <state x="611" y="129" width="759" height="822" key="find.popup" timestamp="1585900327440">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="323" y="151" width="889" height="566" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586073204540">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="323" y="151" width="889" height="566" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1586073204540" />
+    <state x="454" y="98" width="628" height="628" key="find.popup" timestamp="1586073318130">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="454" y="98" width="628" height="628" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1586073318130" />
     <state x="611" y="129" width="759" height="822" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1585900327440" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1586063371143">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1586063371143" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587130362861">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587130362861" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/ApplicationMapper.java</url>
+          <line>25</line>
+          <properties class="team.bishe.wms.mapper.ApplicationMapper" method="selectById">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/bishe$WMSApplication.ic" NAME="WMSApplication Coverage Results" MODIFIED="1586273024594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

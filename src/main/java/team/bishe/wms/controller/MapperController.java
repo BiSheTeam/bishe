@@ -6,8 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import team.bishe.wms.bean.User;
+import team.bishe.wms.bean.WarehousingEntry;
 import team.bishe.wms.common.ApiResponse;
 import team.bishe.wms.mapper.UserMapper;
+import team.bishe.wms.mapper.WarehousingEntryMapper;
+import team.bishe.wms.service.impl.ReceiptDocQueryImpl;
 
 import java.util.List;
 
@@ -16,19 +19,21 @@ import java.util.List;
 @ResponseBody
 @RequestMapping("/user")
 public class MapperController {
-    @Autowired
-    private UserMapper userMapper;
 
-    @RequestMapping("/query")
-    public ApiResponse<List<User>> queryUser(){
-        List<User> users = userMapper.queryUserList();
-/*        User user = new User();
-        users.forEach(e->{
-            user.setId(e.getId());
-            user.setName(e.getName());
-            user.setPassword(e.getPassword());
-            user.setUsername(e.getUsername());
-        });*/
-        return new ApiResponse<List<User>>(1,"OK",users);
+    @Autowired
+    private WarehousingEntryMapper warehousingEntryMapper;
+
+    @RequestMapping("/sele")
+    public ApiResponse<List<WarehousingEntry>> sele(){
+        List<WarehousingEntry> list = null;
+        try {
+            list = new ReceiptDocQueryImpl().selectwarehousingEntry(null,
+                    "2020-03-25","2020-03-30",null);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ApiResponse<List<WarehousingEntry>>(111,"OOOOOOOOOK",list);
     }
+
 }
