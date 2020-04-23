@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="" />
+    <list default="true" id="57d1f324-0029-4091-9a71-71196bee2067" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/CustomerExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/Goods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/GoodsExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/GoodsKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockChangeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockOutExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockChangeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockOutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CustomerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/GoodsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockChangeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockOutMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockChangeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockOutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockChangeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockOutServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/StockChangeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/StockOutMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/common/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/team/bishe/wms/config/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/team/bishe/wms/config/SwaggerConfig.class" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,23 +49,266 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockOutServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockOutController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="78" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockChangeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockChangeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1352">
+              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="spring-beans.schema" />
+        <option value="FxmlFile" />
+        <option value="Mybatis Mapper" />
         <option value="Interface" />
         <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>stockout</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockOutMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockOutService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockChange.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/StockChangeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/StockOutMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/GoodsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockOutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockChange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockChangeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockChangeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockChangeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockChangeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockOutServiceImpl.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/worksoft/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\worksoft\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="D:\briup\project\smart home\repositories" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="warehouse-management-system" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-70" />
+    <option name="y" value="67" />
+    <option name="width" value="1280" />
+    <option name="height" value="679" />
   </component>
   <component name="ProjectId" id="1a1JQPOn0Z0MlQ9dRAv4Vj5dqus" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bishe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bishe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -38,11 +320,46 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\86158\IdeaProjects\bishe\src\main\resources\mapper" />
+      <recent name="C:\Users\86158\IdeaProjects\bishe\src\main\java\team\bishe\wms\bean" />
+      <recent name="C:\Users\86158\IdeaProjects\bishe\src\main\java\team\bishe\wms\controller" />
+      <recent name="C:\Users\86158\IdeaProjects\bishe\src\main\java\team\bishe\wms\service\impl" />
+      <recent name="C:\Users\86158\IdeaProjects\bishe\src\main\java\team\bishe\wms\service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WMSApplication">
+    <configuration name="WMSApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="warehouse-management-system" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.wms.WMSApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WMSApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="warehouse-management-system" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="team.bishe.warehousemanagementsystem.WMSApplication" />
@@ -96,76 +413,372 @@
       <workItem from="1585897777102" duration="1003000" />
       <workItem from="1585900270033" duration="265000" />
       <workItem from="1585900547934" duration="11378000" />
+      <workItem from="1586575111597" duration="1490000" />
+      <workItem from="1586598503090" duration="1613000" />
+      <workItem from="1586600178675" duration="946000" />
+      <workItem from="1586996344224" duration="1201000" />
+      <workItem from="1587105657112" duration="104000" />
+      <workItem from="1587110458242" duration="658000" />
+      <workItem from="1587112414996" duration="359000" />
+      <workItem from="1587547402558" duration="13795000" />
+      <workItem from="1587598548624" duration="3558000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23724000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Problems" order="11" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3290993" />
+      <window_info anchor="bottom" id="Messages" order="16" />
+      <window_info anchor="bottom" id="MyBatis Log" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Problems" order="11" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.3290993" />
+      <window_info anchor="bottom" id="Messages" order="16" />
+      <window_info anchor="bottom" id="MyBatis Log" order="17" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585900582564">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900582564" />
-    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585900879842">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1585900879842" />
-    <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585901750458">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585901750458" />
-    <state width="1815" height="332" key="GridCell.Tab.0.bottom" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.center" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.left" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.0.right" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.bottom" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.center" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.left" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state width="1815" height="332" key="GridCell.Tab.1.right" timestamp="1585918603176">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state width="1815" height="332" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1585918603176" />
-    <state x="562" y="205" key="Registry" timestamp="1585911137276">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="562" y="205" key="Registry/62.0.1858.1080@62.0.1858.1080" timestamp="1585911137276" />
-    <state x="494" y="185" key="SettingsEditor" timestamp="1585911093576">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="494" y="185" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1585911093576" />
-    <state x="790" y="321" key="chooseDestDirectoryDialog" timestamp="1585900097498">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="790" y="321" key="chooseDestDirectoryDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900097498" />
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1585900270127">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1585900270127" />
-    <state x="611" y="129" width="759" height="822" key="find.popup" timestamp="1585900327440">
-      <screen x="62" y="0" width="1858" height="1080" />
-    </state>
-    <state x="611" y="129" width="759" height="822" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1585900327440" />
+    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="445" y="198" width="1165" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" />
+    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="796" y="233" key="#com.intellij.ide.util.MemberChooser/62.0.1858.1080@62.0.1858.1080" />
+    <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" />
+    <state x="595" y="468" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.0.bottom" />
+    <state width="1815" height="332" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.0.center" />
+    <state width="1815" height="332" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.0.left" />
+    <state width="1815" height="332" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.0.right" />
+    <state width="1815" height="332" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.1.bottom" />
+    <state width="1815" height="332" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.1.center" />
+    <state width="1815" height="332" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.1.left" />
+    <state width="1815" height="332" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" />
+    <state width="1815" height="332" key="GridCell.Tab.1.right" />
+    <state width="1815" height="332" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" />
+    <state x="562" y="205" key="Registry" />
+    <state x="562" y="205" key="Registry/62.0.1858.1080@62.0.1858.1080" />
+    <state x="494" y="185" key="SettingsEditor" />
+    <state x="494" y="185" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" />
+    <state x="790" y="321" key="chooseDestDirectoryDialog" />
+    <state x="790" y="321" key="chooseDestDirectoryDialog/62.0.1858.1080@62.0.1858.1080" />
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog" />
+    <state x="683" y="368" key="com.intellij.ide.util.TipDialog/62.0.1858.1080@62.0.1858.1080" />
+    <state x="611" y="129" width="759" height="822" key="find.popup" />
+    <state x="611" y="129" width="759" height="822" key="find.popup/62.0.1858.1080@62.0.1858.1080" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/CustomerExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CustomerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="347" column="77" selection-start-line="347" selection-start-column="77" selection-end-line="347" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/CustomerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/MapperController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/ApiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/config/ExceptionAspectConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/common/ApiResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/GoodsKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StockChangeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11403">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/GoodsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockOutExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockChangeExample.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StockOutMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="460" column="51" selection-start-line="460" selection-start-column="51" selection-end-line="460" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockOutService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockChangeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/mapper/StockOutMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/StockChangeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockOutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/bean/StockChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1879">
+          <caret line="67" column="34" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/controller/StockChangeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1352">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockChangeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/team/bishe/wms/service/impl/StockOutServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="36" column="67" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

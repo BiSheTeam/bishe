@@ -17,7 +17,9 @@ public class ApiResponse<T> {
         this.msg = msg;
         this.data = data;
     }
+    public  ApiResponse(){
 
+    }
     public Integer getCode() {
         return code;
     }
