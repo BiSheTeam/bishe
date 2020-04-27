@@ -9,7 +9,7 @@ import java.util.List;
  * @Date 2020/4/11 12:17
  * @Version 1.0
  **/
-public class CardQueryResp<T> {
+public class QueryResp<T> {
     private List<T> lists;
     private Integer pageNumber;
     private Integer pageSize;

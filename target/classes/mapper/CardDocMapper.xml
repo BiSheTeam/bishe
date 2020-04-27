@@ -19,7 +19,7 @@
             app_dt,
             audit_opr_id,
             brand_id,
-            brand_nm,
+            brand_Nm,
             card_type,
             start_id,
             end_id,
@@ -65,15 +65,21 @@
         )
     </insert>
     <!--查询卡品牌信息-->
-    <select id="queryCardBrandInfo" resultType="team.bishe.wms.bean.TbrandInfo">
+    <select id="queryCardBrandInfo" resultType="team.bishe.wms.pojo.BrandResp">
         select t.brand_id as brandId,
                 t.brand_desc as brandDesc
             from t_brand_info t
     </select>
-
+    <!--查询卡品牌名称信息-->
+    <select id="queryBrandNm" resultType="team.bishe.wms.pojo.BrandResp">
+        select t.brand_desc as brandDesc
+            from t_brand_info t
+            where t.brand_id = #{brandId}
+    </select>
     <!--查询卡档信息-->
-    <select id="cardDocList" resultType="team.bishe.wms.bean.TcardDoc">
-        select
+    <select id="cardDocList" resultType="team.bishe.wms.bean.TcardDoc" parameterType="team.bishe.wms.pojo.CardQueryReq">
+        select *
+        from  (select
             doc_app_id as docAppId,
             app_dt as appDt,
             brand_id as brandId,
@@ -87,9 +93,27 @@
             pay_mo as payMo,
             flag as flag,
             stat as stat
-            from t_card_doc
+            from t_card_doc)e
+            LIMIT #{startRow},#{pageSize}
     </select>
-
+    <!--查询卡档信息总记录数-->
+    <select id="docCount" resultType="java.lang.Integer">
+        select count(*) from(select
+            doc_app_id as docAppId,
+            app_dt as appDt,
+            brand_id as brandId,
+            brand_nm as brandNm,
+            card_type as cardType,
+            start_id as startId,
+            end_id as endId,
+            card_cnt as cardCnt,
+            value as value,
+            eff_term as effTerm,
+            pay_mo as payMo,
+            flag as flag,
+            stat as stat
+            from t_card_doc)e
+    </select>
     <!--卡档申请信息撤销-->
     <delete id="cardDocCancel">
         delete
@@ -139,8 +163,9 @@
     </update>
 
     <!--查询拒绝卡档记录列表-->
-    <select id="cardDocRefList" resultType="team.bishe.wms.bean.TcardDoc">
-        select
+    <select id="cardDocRefList" resultType="team.bishe.wms.bean.TcardDoc" parameterType="team.bishe.wms.pojo.CardQueryReq">
+        select *
+        from  (select
             doc_app_id as docAppId,
             app_dt as appDt,
             brand_nm as brandNm,
@@ -154,6 +179,26 @@
             flag as flag,
             stat as stat
             from t_card_doc
-            where stat = '已拒绝'
+            where stat = '已拒绝')e
+            LIMIT #{startRow},#{pageSize}
+    </select>
+
+    <!-- 查询被拒绝卡档总记录数-->
+    <select id="docRefCount" resultType="java.lang.Integer">
+ select count(*) from(select
+            doc_app_id as docAppId,
+            app_dt as appDt,
+            brand_nm as brandNm,
+            card_type as cardType,
+            start_id as startId,
+            end_id as endId,
+            card_cnt as cardCnt,
+            value as value,
+            eff_term as effTerm,
+            pay_mo as payMo,
+            flag as flag,
+            stat as stat
+            from t_card_doc
+            where stat = '已拒绝')e
     </select>
 </mapper>

@@ -7,7 +7,7 @@
     <!--单卡开卡-->
     <update id="openCard" parameterType="team.bishe.wms.pojo.OpencardReq">
         update t_card_info
-            set card_sta = '正常'
+            set card_sta = '正常',start_dt = #{startDt}
             where card_id = #{cardId}
     </update>
     <!--增加客户证件信息-->

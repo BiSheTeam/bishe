@@ -2,13 +2,11 @@ package team.bishe.wms.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.common.ApiResponse;
 import team.bishe.wms.pojo.CardQueryReq;
-import team.bishe.wms.pojo.CardQueryResp;
+import team.bishe.wms.pojo.QueryResp;
 import team.bishe.wms.service.CardInfoQueryService;
 
 /**
@@ -20,6 +18,7 @@ import team.bishe.wms.service.CardInfoQueryService;
  **/
 
 @Slf4j
+@CrossOrigin(origins = "*", maxAge = 3600)
 @ResponseBody
 @RestController
 @RequestMapping("/cardQuery")
@@ -32,11 +31,13 @@ public class CardQueryInfoController {
      **/
     @RequestMapping("/cardInfoList")
     public ApiResponse cardInfoList(CardQueryReq cardQueryReq){
-        ApiResponse<CardQueryResp<TcardInfo>> apiResponse = new ApiResponse<>();
+       /* response.setHeader("Access-Control-Allow-Origin", "*");*/
+
+        ApiResponse<QueryResp<TcardInfo>> apiResponse = new ApiResponse<>();
         try {
             log.info("调用查询卡信息列表接口");
-            CardQueryResp<TcardInfo> lists = cardInfoQueryService.cardInfoList(cardQueryReq);
-            apiResponse.setCode(200);
+            QueryResp<TcardInfo> lists = cardInfoQueryService.cardInfoList(cardQueryReq);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("查询成功");
             apiResponse.setData(lists);
         } catch (Exception e) {
@@ -55,7 +56,7 @@ public class CardQueryInfoController {
         try {
             log.info("调用查询卡信息列表详情接口");
             TcardInfo tcardInfo = cardInfoQueryService.cardInfoDetail(cardQueryReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("查询成功");
             apiResponse.setData(tcardInfo);
         } catch (Exception e) {
@@ -70,11 +71,11 @@ public class CardQueryInfoController {
      **/
     @RequestMapping("/openCardList")
     public ApiResponse openCardList(CardQueryReq cardQueryReq){
-        ApiResponse<CardQueryResp<TcardInfo>> apiResponse = new ApiResponse<>();
+        ApiResponse<QueryResp<TcardInfo>> apiResponse = new ApiResponse<>();
         try {
             log.info("调用查询开卡记录列表接口");
-            CardQueryResp<TcardInfo> lists = cardInfoQueryService.openCardList(cardQueryReq);
-            apiResponse.setCode(200);
+            QueryResp<TcardInfo> lists = cardInfoQueryService.openCardList(cardQueryReq);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("查询成功");
             apiResponse.setData(lists);
         } catch (Exception e) {
@@ -93,7 +94,7 @@ public class CardQueryInfoController {
         try {
             log.info("调用查询开卡记录列表详情接口");
             TcardInfo tcardInfo = cardInfoQueryService.openCardDetail(cardQueryReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("查询成功");
             apiResponse.setData(tcardInfo);
         } catch (Exception e) {

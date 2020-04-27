@@ -2,6 +2,7 @@ package team.bishe.wms.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import team.bishe.wms.service.CardSpecialService;
  * @Version 1.0
  **/
 @Slf4j
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @ResponseBody
 @RequestMapping("/cardSpecial")
@@ -33,7 +35,7 @@ public class CardSpecialController {
         try {
             log.info("调用卡挂失接口");
             cardSpecialService.cardLoss(cardSpecialReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("卡挂失成功");
         } catch (Exception e) {
             log.error("调用卡挂失接口失败",e.getMessage());
@@ -51,7 +53,7 @@ public class CardSpecialController {
         try {
             log.info("调用卡解挂接口");
             cardSpecialService.cancelLoss(cardSpecialReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("卡解挂成功");
         } catch (Exception e) {
             log.error("调用卡解挂接口失败",e.getMessage());
@@ -69,7 +71,7 @@ public class CardSpecialController {
         try {
             log.info("调用卡延期接口");
             cardSpecialService.cardDelay(cardSpecialReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("卡延期成功");
         } catch (Exception e) {
             log.error("调用卡延期接口失败",e.getMessage());
@@ -87,7 +89,7 @@ public class CardSpecialController {
         try {
             log.info("调用退卡接口");
             cardSpecialService.cardRefund(cardSpecialReq);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("退卡成功");
         } catch (Exception e) {
             log.error("调用退卡接口",e.getMessage());

@@ -6,6 +6,9 @@ import team.bishe.wms.mapper.OpenCardMapper;
 import team.bishe.wms.pojo.OpencardReq;
 import team.bishe.wms.service.OpenCardService;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @ClassName OpenCardServiceImpl
  * @Description
@@ -24,6 +27,8 @@ public class OpenCardServiceImpl implements OpenCardService {
      */
     @Override
     public void openCard(OpencardReq opencardReq) {
+        SimpleDateFormat fm = new SimpleDateFormat("yyyyMMdd");
+        opencardReq.setStartDt(fm.format(new Date()));
         openCardMapper.openCard(opencardReq);
         openCardMapper.addCustomerInfo(opencardReq);
     }
@@ -35,11 +40,14 @@ public class OpenCardServiceImpl implements OpenCardService {
      */
     @Override
     public void batchOpenCard(OpencardReq opencardReq) {
+        SimpleDateFormat fm = new SimpleDateFormat("yyyyMMdd");
+        opencardReq.setStartDt(fm.format(new Date()));
         int count = Integer.parseInt(opencardReq.getEndId()) - Integer.parseInt(opencardReq.getStartId()) + 1;
         int a = Integer.parseInt(opencardReq.getStartId());
         for (int i=0;i<count;i++){
             opencardReq.setCardId(String.valueOf(a));
             openCardMapper.openCard(opencardReq);
+            openCardMapper.addCustomerInfo(opencardReq);
             a = ++a;
         }
 

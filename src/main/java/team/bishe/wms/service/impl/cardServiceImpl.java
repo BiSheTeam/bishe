@@ -3,13 +3,16 @@ package team.bishe.wms.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import team.bishe.wms.bean.TbrandInfo;
 import team.bishe.wms.bean.TcardDoc;
 import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.bean.TcardUse;
 import team.bishe.wms.controller.CommonController;
 import team.bishe.wms.mapper.CardDocMapper;
+import team.bishe.wms.pojo.BrandResp;
+import team.bishe.wms.pojo.CardQueryReq;
+import team.bishe.wms.pojo.QueryResp;
 import team.bishe.wms.service.CardService;
+import team.bishe.wms.util.PagesUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -45,11 +48,13 @@ public class cardServiceImpl implements CardService {
      */
     @Override
     public void makeCardDoc(TcardDoc tcardDoc) {
+        BrandResp brandResp = cardUseMapper.queryBrandNm(Integer.parseInt(tcardDoc.getBrandId()));
         SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmm");
         String date = df.format(new Date());
         String replace = date.replace("2020", "2021");
         tcardDoc.setBrhId("0");
         tcardDoc.setAppDt(date);
+        tcardDoc.setBrandNm(brandResp.getBrandDesc());
         tcardDoc.setCardType("实体卡");
         tcardDoc.setTotValue(5000);
         tcardDoc.setStartDt(date);
@@ -62,7 +67,6 @@ public class cardServiceImpl implements CardService {
         tcardDoc.setLastUpdTxnCd("制卡申请");
         tcardDoc.setLastUpdTs(date);
         cardUseMapper.makeCardDoc(tcardDoc);
-
     }
 
     /**
@@ -70,7 +74,7 @@ public class cardServiceImpl implements CardService {
      * @return
      */
     @Override
-    public List<TbrandInfo> queryCardBrandInfo() {
+    public List<BrandResp> queryCardBrandInfo() {
         return cardUseMapper.queryCardBrandInfo();
     }
 
@@ -79,8 +83,16 @@ public class cardServiceImpl implements CardService {
      * @return
      */
     @Override
-    public List<TcardDoc> cardDocList() {
-        return cardUseMapper.cardDocList();
+    public QueryResp<TcardDoc> cardDocList(CardQueryReq cardQueryReq) {
+        QueryResp<TcardDoc> resp = new QueryResp<>();
+        Integer count = cardUseMapper.docCount();
+        PagesUtil.pages().pageParam(cardQueryReq);
+        List<TcardDoc> tcardDocs = cardUseMapper.cardDocList(cardQueryReq);
+        resp.setRecords(count);
+        resp.setLists(tcardDocs);
+        resp.setPageNumber(cardQueryReq.getPageIndex());
+        resp.setPageSize(cardQueryReq.getPageSize());
+        return resp;
     }
 
     /**
@@ -99,6 +111,8 @@ public class cardServiceImpl implements CardService {
     @Override
     public void cardDocIndepot(TcardDoc tcardDoc,TcardInfo tcardInfo) {
         SimpleDateFormat fm = new SimpleDateFormat("yyyyMMddHHmmss");
+        //查询卡品牌名称
+
         tcardInfo.setBrhId("0");
         tcardInfo.setBrandId(tcardDoc.getBrandId());
         tcardInfo.setBuyBrhId("0");
@@ -112,6 +126,7 @@ public class cardServiceImpl implements CardService {
             a=a+1;
             cardUseMapper.cardDocIndepot(tcardInfo);
         }
+        System.out.println("开始入库");
         cardUseMapper.updateDocSta(tcardDoc.getDocAppId());
     }
 
@@ -130,8 +145,18 @@ public class cardServiceImpl implements CardService {
      * @return
      */
     @Override
-    public List<TcardDoc> cardDocRefList() {
-        return cardUseMapper.cardDocRefList();
+    public QueryResp<TcardDoc> cardDocRefList(CardQueryReq cardQueryReq) {
+        QueryResp<TcardDoc> resp = new QueryResp<>();
+        Integer count = cardUseMapper.docRefCount();
+        PagesUtil.pages().pageParam(cardQueryReq);
+        List<TcardDoc> tcardDocs = cardUseMapper.cardDocRefList(cardQueryReq);
+        resp.setRecords(count);
+        resp.setLists(tcardDocs);
+        resp.setPageNumber(cardQueryReq.getPageIndex());
+        resp.setPageSize(cardQueryReq.getPageSize());
+        return  resp;
     }
+
+
 
 }

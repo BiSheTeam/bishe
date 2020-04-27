@@ -30,7 +30,12 @@ public interface PickGoodInMapper {
      * @Author RenJian
      * @Description 查询拣货单
      **/
-    List<PickForm> queryPickForm(@Param("custId") String custId);
+    List<PickForm> queryPickForm(PickGoodInReq pickGoodInReq);
+    /*
+     * @Author RenJian
+     * @Description 查询拣货单
+     **/
+    Integer count(PickGoodInReq pickGoodInReq);
     /*
      * @Author RenJian
      * @Description 删除拣货单

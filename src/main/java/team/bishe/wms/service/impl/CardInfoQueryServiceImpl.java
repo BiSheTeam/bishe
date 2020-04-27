@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.mapper.CardInfoQueryMapper;
 import team.bishe.wms.pojo.CardQueryReq;
-import team.bishe.wms.pojo.CardQueryResp;
+import team.bishe.wms.pojo.QueryResp;
 import team.bishe.wms.service.CardInfoQueryService;
 import team.bishe.wms.util.PagesUtil;
 import team.bishe.wms.util.TimeTrans;
@@ -30,9 +30,9 @@ public class CardInfoQueryServiceImpl implements CardInfoQueryService {
      * @return
      */
     @Override
-    public CardQueryResp<TcardInfo> cardInfoList(CardQueryReq cardQueryReq) {
+    public QueryResp<TcardInfo> cardInfoList(CardQueryReq cardQueryReq) {
         Integer count = cardInfoQueryMapper.cardCount(cardQueryReq);
-        CardQueryResp<TcardInfo> resp = new CardQueryResp<>();
+        QueryResp<TcardInfo> resp = new QueryResp<>();
         resp.setRecords(count);
         PagesUtil.pages().pageParam(cardQueryReq);
         List<TcardInfo> infos = cardInfoQueryMapper.cardInfoList(cardQueryReq);
@@ -59,9 +59,9 @@ public class CardInfoQueryServiceImpl implements CardInfoQueryService {
      * @return
      */
     @Override
-    public CardQueryResp<TcardInfo> openCardList(CardQueryReq cardQueryReq) {
+    public QueryResp<TcardInfo> openCardList(CardQueryReq cardQueryReq) {
         TimeTrans timeTrans = new TimeTrans();
-        CardQueryResp<TcardInfo> resp = new CardQueryResp<>();
+        QueryResp<TcardInfo> resp = new QueryResp<>();
         String startDt = timeTrans.intDateFormat("yyyyMMdd", cardQueryReq.getStartDt());
         String endDt = timeTrans.intDateFormat("yyyyMMdd", cardQueryReq.getEndDt());
         cardQueryReq.setEndDt(endDt);

@@ -3,6 +3,7 @@ package team.bishe.wms.service;
 import org.springframework.stereotype.Service;
 import team.bishe.wms.bean.PickForm;
 import team.bishe.wms.pojo.PickGoodInReq;
+import team.bishe.wms.pojo.QueryResp;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface PickGoodInService {
      * @Author RenJian
      * @Description 查询拣货单
      **/
-    List<PickForm> queryPickForm(String custId);
+   QueryResp<PickForm> queryPickForm(PickGoodInReq pickGoodInReq);
     /*
      * @Author RenJian
      * @Description 删除拣货单

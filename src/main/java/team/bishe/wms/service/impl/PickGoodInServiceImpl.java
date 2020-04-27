@@ -6,7 +6,9 @@ import team.bishe.wms.bean.PickForm;
 import team.bishe.wms.bean.WgoodsInfo;
 import team.bishe.wms.mapper.PickGoodInMapper;
 import team.bishe.wms.pojo.PickGoodInReq;
+import team.bishe.wms.pojo.QueryResp;
 import team.bishe.wms.service.PickGoodInService;
+import team.bishe.wms.util.PagesUtil;
 
 import java.util.List;
 
@@ -37,9 +39,16 @@ public class PickGoodInServiceImpl implements PickGoodInService {
     }
 
     @Override
-    public List<PickForm> queryPickForm(String custId) {
-        List<PickForm> pickForms = pickGoodInMapper.queryPickForm(custId);
-        return pickForms;
+    public QueryResp<PickForm> queryPickForm(PickGoodInReq pickGoodInReq) {
+        QueryResp<PickForm> resp = new QueryResp<>();
+        PagesUtil.pages().pageParam(pickGoodInReq);
+        Integer count = pickGoodInMapper.count(pickGoodInReq);
+        List<PickForm> pickForms = pickGoodInMapper.queryPickForm(pickGoodInReq);
+        resp.setLists(pickForms);
+        resp.setRecords(count);
+        resp.setPageSize(pickGoodInReq.getPageSize());
+        resp.setPageNumber(pickGoodInReq.getPageIndex());
+        return resp;
     }
 
     @Override

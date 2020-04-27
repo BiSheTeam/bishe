@@ -43,22 +43,33 @@
     </select>
 
     <!--查询拣货单-->
-    <select id="queryPickForm" resultType="team.bishe.wms.bean.PickForm">
-        select g_form_id as gFormId,
-                cust_id as custId,
-                g_pos_id as gPosId,
-                good_nm as goodNm,
-                good_num as goodNum,
-                pick_sta as pickSta,
-                good_unit as goodUnit,
-                pick_mode as pickMode
-                from pick_form p
-                where 1=1
+    <select id="queryPickForm" resultType="team.bishe.wms.bean.PickForm" parameterType="team.bishe.wms.pojo.PickGoodInReq">
+        select * from
+        (select g_form_id as gFormId,
+        cust_id as custId,
+        g_pos_id as gPosId,
+        good_nm as goodNm,
+        good_num as goodNum,
+        pick_sta as pickSta,
+        good_unit as goodUnit,
+        pick_mode as pickMode
+        from pick_form p
+        where 1=1
+        <if test="custId != null and custId !=''">
+            and p.cust_id = #{custId}
+        </if>)e
+        LIMIT #{startRow},#{pageSize}
+    </select>
+    <!--查询拣货单总数-->
+    <select id="count" resultType="java.lang.Integer" parameterType="team.bishe.wms.pojo.PickGoodInReq">
+select count(*) from (select g_form_id as gFormId, cust_id as custId, g_pos_id as gPosId, good_nm as goodNm, good_num as goodNum, pick_sta as pickSta, good_unit as goodUnit, pick_mode as pickMode
+ FROM pick_form p
+ WHERE 1=1
         <if test="custId != null and custId !=''">
             and p.cust_id = #{custId}
         </if>
+ )e
     </select>
-
     <!--删除拣货单-->
     <delete id="delPickForm" >
         delete  from pick_form where g_form_id = #{gFormId}

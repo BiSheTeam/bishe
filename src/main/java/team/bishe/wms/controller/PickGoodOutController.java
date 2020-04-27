@@ -2,6 +2,7 @@ package team.bishe.wms.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @ResponseBody
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/pickGoodOut")
 public class PickGoodOutController {
     @Autowired
@@ -36,7 +38,7 @@ public class PickGoodOutController {
             System.out.println(pickMode);
             log.info("调取输送系统整箱拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -55,7 +57,7 @@ public class PickGoodOutController {
         try {
             log.info("调取托盘整箱拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -73,7 +75,7 @@ public class PickGoodOutController {
         try {
             log.info("调取自动混箱拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -91,7 +93,7 @@ public class PickGoodOutController {
         try {
             log.info("调取集群拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -109,7 +111,7 @@ public class PickGoodOutController {
         try {
             log.info("调取批量分拣对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -127,7 +129,7 @@ public class PickGoodOutController {
         try {
             log.info("调取货到机器人拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {
@@ -145,7 +147,7 @@ public class PickGoodOutController {
         try {
             log.info("调取托盘整箱拣选对外保留接口");
             List<PickGoodOutResp> resp = pickGoodOutService.pickGood(pickMode);
-            apiResponse.setCode(200);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("成功获取参数");
             apiResponse.setData(resp);
         } catch (Exception e) {

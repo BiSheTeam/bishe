@@ -2,10 +2,12 @@ package team.bishe.wms.service;
 
 
 import org.springframework.stereotype.Service;
-import team.bishe.wms.bean.TbrandInfo;
 import team.bishe.wms.bean.TcardDoc;
 import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.bean.TcardUse;
+import team.bishe.wms.pojo.BrandResp;
+import team.bishe.wms.pojo.CardQueryReq;
+import team.bishe.wms.pojo.QueryResp;
 
 import java.util.List;
 
@@ -28,13 +30,13 @@ public interface CardService {
      * @param
      * @return
      */
-    List<TbrandInfo>  queryCardBrandInfo();
+    List<BrandResp>  queryCardBrandInfo();
     /**
      * 卡档信息查询
      * @param
      * @return
      */
-    List<TcardDoc> cardDocList();
+    QueryResp<TcardDoc> cardDocList(CardQueryReq cardQueryReq);
     /**
      * 卡档信息撤销
      * @param
@@ -58,5 +60,5 @@ public interface CardService {
      * @param
      * @return
      */
-    List<TcardDoc> cardDocRefList();
+    QueryResp<TcardDoc> cardDocRefList(CardQueryReq cardQueryReq);
 }

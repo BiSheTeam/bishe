@@ -32,6 +32,18 @@ public class OpencardReq {
      * 截止卡号
      **/
     private String  endId;
+    /*
+     * 开始日期
+     **/
+    private String startDt;
+
+    public String getStartDt() {
+        return startDt;
+    }
+
+    public void setStartDt(String startDt) {
+        this.startDt = startDt;
+    }
 
     public String getCardId() {
         return cardId;

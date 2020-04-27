@@ -3,10 +3,12 @@ package team.bishe.wms.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
-import team.bishe.wms.bean.TbrandInfo;
 import team.bishe.wms.bean.TcardDoc;
 import team.bishe.wms.bean.TcardInfo;
 import team.bishe.wms.bean.TcardUse;
+import team.bishe.wms.pojo.BrandResp;
+import team.bishe.wms.pojo.CardQueryReq;
+
 import java.util.List;
 
 @Component
@@ -29,13 +31,19 @@ public interface CardDocMapper {
      * @param
      * @return
      */
-    List<TbrandInfo>  queryCardBrandInfo();
+    List<BrandResp>  queryCardBrandInfo();
     /**
      * 卡档信息查询
      * @param
      * @return
      */
-    List<TcardDoc> cardDocList();
+    List<TcardDoc> cardDocList(CardQueryReq cardQueryReq);
+    /**
+     *查询卡档信息总记录数
+     * @param
+     * @return
+     */
+    public Integer docCount ();
     /**
      * 卡档信息撤销
      * @param
@@ -65,5 +73,17 @@ public interface CardDocMapper {
      * @param
      * @return
      */
-    List<TcardDoc> cardDocRefList();
+    List<TcardDoc> cardDocRefList(CardQueryReq cardQueryReq);
+    /**
+     * 查询卡品牌名称
+     * @param
+     * @return
+     */
+    BrandResp queryBrandNm(@Param("brandId") Integer brandId);
+    /**
+     *查询被拒绝卡档信息总记录数
+     * @param
+     * @return
+     */
+    public Integer docRefCount ();
 }

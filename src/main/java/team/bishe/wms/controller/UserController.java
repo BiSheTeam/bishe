@@ -3,6 +3,7 @@ package team.bishe.wms.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 @ResponseBody
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/user")
 public class UserController {
 
@@ -56,7 +58,7 @@ public class UserController {
             if (loginUser != null){
                 session.setAttribute("loginUserId",loginUser.getUserId());
                 redisTemplate.opsForValue().set(session.getId(), "loginUser", loginUser.getUserId());
-                apiResponse.setCode(200);
+                apiResponse.setCode(20000);
                 apiResponse.setMsg("登陆成功");
                 apiResponse.setData(user);
                 }else {
