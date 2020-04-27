@@ -1,5 +1,6 @@
 package team.bishe.wms.service;
 
+import org.springframework.stereotype.Service;
 import team.bishe.wms.bean.DetailedEntry;
 import team.bishe.wms.bean.WarehousingEntry;
 
@@ -8,6 +9,7 @@ import java.util.List;
 /**
  * 入库单(明细)查询
  */
+@Service
 public interface ReceiptDocQueryService {
     /**
      * 入库单查询

@@ -1,6 +1,5 @@
 package team.bishe.wms.controller;
 
-import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 @Slf4j
 @ResponseBody
 @RestController
+@CrossOrigin(origins = "*",maxAge = 3600)
 @RequestMapping(value = "/warehouseManage")
 public class WarehouseManageController {
 

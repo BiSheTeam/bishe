@@ -1,8 +1,11 @@
 package team.bishe.wms.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 入库管理Service接口
  */
+@Service
 public interface WarehouseManageService {
     /**
      *  入库申请

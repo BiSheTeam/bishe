@@ -1,8 +1,11 @@
 package team.bishe.wms.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 越库转移service接口
  */
+@Service
 public interface ChangeRepositoryService {
 
     /**

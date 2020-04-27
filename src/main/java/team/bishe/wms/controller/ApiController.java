@@ -1,6 +1,7 @@
 package team.bishe.wms.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +9,7 @@ import team.bishe.wms.common.ApiResponse;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "*",maxAge = 3600)
 @RequestMapping("/api")
 public class ApiController {
 

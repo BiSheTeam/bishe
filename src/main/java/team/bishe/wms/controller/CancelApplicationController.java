@@ -2,9 +2,7 @@ package team.bishe.wms.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import team.bishe.wms.common.ApiResponse;
 import team.bishe.wms.service.CancelApplicationService;
 
@@ -14,19 +12,21 @@ import team.bishe.wms.service.CancelApplicationService;
 @Slf4j
 @ResponseBody
 @RestController
-@RequestMapping(value = "/CancelApplication")
+@CrossOrigin(origins = "*",maxAge = 3600)
+@RequestMapping(value = "/cancelApplication")
 public class CancelApplicationController {
 
     @Autowired
     private CancelApplicationService cancelApplicationService;
 
+    @RequestMapping(value = "/cancelOrder",method = RequestMethod.POST)
     public ApiResponse cancelApplication(Integer applicationId){
         ApiResponse apiResponse = new ApiResponse<>();
         try {
             log.info("申请退货");
             cancelApplicationService.cancelOrder(applicationId);
             apiResponse.setCode(100);
-            apiResponse.setMsg("成功");
+            apiResponse.setMsg("退货成功");
         }catch (Exception e){
             log.error("失败",e.getMessage());
             e.printStackTrace();
