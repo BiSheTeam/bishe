@@ -12,5 +12,5 @@ public interface CancelApplicationService {
      * 根据申请单单号取消订单
      * @param applicationId
      */
-    void cancelOrder(Integer applicationId);
+    void cancelOrder(String applicationId);
 }

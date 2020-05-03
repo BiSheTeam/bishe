@@ -2,33 +2,32 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="team.bishe.wms.mapper.GoodsMapper">
-    <resultMap id="goods" type="team.bishe.wms.bean.Goods">
-        <id property="id" column="GOOD_ID"/>
-        <result property="name" column="GOOD_NAME"/>
-        <result property="type" column="GOOD_TYPE"/>
-        <result property="size" column="GOOD_SIZE"/>
-        <result property="value" column="GOOD_VALUE"/>
-    </resultMap>
 
-    <select id="selectById" resultMap="goods">
+
+    <select id="selectById" resultType="team.bishe.wms.bean.Goods">
         select * from wms_goods where good_id = #{id}
     </select>
 
-    <select id="selectAll" resultMap="goods">
+    <select id="selectAll" resultType="team.bishe.wms.bean.Goods">
         select * from wms_goods
     </select>
 
-    <select id="selectByName" resultMap="goods">
-        select * from wms_goods where good_name = #{name};
+    <select id="selectByName" resultType="team.bishe.wms.bean.Goods">
+        select *
+        from t_w_goods_info
+        where good_nm = #{goodsName}
     </select>
 
-    <select id="selectValueByName" resultMap="goods">
-        select GOOD_VALUE
-        FROM wms_goods
-        where GOOD_NAME = #{goodsName}
+    <select id="selectValueByName" resultType="java.lang.Double">
+        select
+            good_value
+        FROM
+            t_w_goods_info
+        where
+            good_nm = #{goodsName}
     </select>
 
-    <select id="selectApproximateByName" resultMap="goods">
+    <select id="selectApproximateByName" resultType="team.bishe.wms.bean.Goods">
         select * from wms_goods where good_name like concat(concat('%',#{name}),'%')
     </select>
 
@@ -36,21 +35,10 @@
         insert into wms_goods(good_name,good_type,good_size,good_value) values (#{name},#{type},#{size},#{value})
     </insert>
 
-    <insert id="insertBatch">
-
-    </insert>
-
     <update id="update">
         update wms_goods set good_name = #{name},good_type = #{type},good_size = #{size},good_value = #{value}
         where good_id = #{id}
     </update>
 
-    <delete id="deleteById">
-        delete from wms_goods where good_id = #{id}
-    </delete>
-
-    <delete id="deleteByName">
-        delete from wms_goods where good_name = #{name}
-    </delete>
 
 </mapper>

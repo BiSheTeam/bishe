@@ -2,85 +2,63 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="team.bishe.wms.mapper.WarehousingEntryMapper">
-    <resultMap id="warehousingEntry" type="team.bishe.wms.bean.WarehousingEntry">
-        <id property="id" column="id"/>
-        <result property="customerId" column="customer_id"/>
-        <result property="customerName" column="customer_name"/>
-        <result property="goodsName" column="good_name"/>
-        <result property="goodsType" column="good_type"/>
-        <result property="number" column="number"/>
-        <result property="applicationDate" column="date"/>
-        <result property="repositoryId" column="repository_id"/>
-        <result property="accountMan" column="accountMan"/>
-        <result property="customerId" column="customerId"/>
-        <result property="time" column="time"/>
-        <result property="laborCost" column="laborCost"/>
-        <result property="otherCost" column="otherCost"/>
-        <result property="totalCost" column="totalCost"/>
-        <result property="payment" column="payment"/>
-        <result property="status" column="status"/>
-    </resultMap>
 
-    <select id="selectRandom" resultMap="warehousingEntry">
-        select *
-        from wms
+
+    <select id="selectRandom" resultType="team.bishe.wms.bean.WarehousingEntry">
+        select
+            in_ws_no as id,
+            customer_name as customerName,
+            account_man as accountMan,
+            create_date as applicationDate,
+            in_storageCost as storageCost,
+            in_laborCost as laborCost,
+            in_otherCost as otherCost,
+            in_payment as payment,
+            status as status,
+            totalCost as totalCost
+        from t_shstock_in
         where 1=1
-            <if test="param1 != null and param1 !=''" >and id = #{param1}</if>
-            <if test="param2 != null and param2 !=''">and customer = #{param2}</if>
-            <if test="param3 != null and param3 !='' and param4 != null and param4 !=''">and time between #{param3} and #{param4}</if>
+            <if test="param1 != null and param1 !=''" >and in_ws_no = #{param1}</if>
+            <if test="param2 != null and param2 !=''">and customer_id = #{param2}</if>
+            <if test="param3 != null and param3 !='' and param4 != null and param4 !=''">and create_date between #{param3} and #{param4}</if>
     </select>
 
-    <select id="selectAll" resultMap="warehousingEntry">
-        select * from 入库单
+    <select id="selectById" resultType="team.bishe.wms.bean.WarehousingEntry">
+        select
+            in_ws_no as id,
+            customer_name as customerName,
+            create_date as applicationDate,
+            status as status
+        from t_shstock_in
+        where in_application_id = #{applicationId}
     </select>
-
-    <select id="selectById" resultMap="warehousingEntry">
-
-    </select>
-
-    <select id="selectByCusId" resultMap="warehousingEntry">
-
-    </select>
-
-    <select id="selectByTime" resultMap="warehousingEntry">
-
-    </select>
-
-    <insert id="insert">
-
-    </insert>
 
     <insert id="insertByApp">
-        insert into wms_warehouseEntry(
+        insert into t_shstock_in(
+                in_ws_no,
                 CUSTOMER_ID,
 				CUSTOMER_NAME,
-				GOOD_NAME,
-				GOOD_TYPE,
-				NUMBER,
-				TIME,
-				REPOSITORY_ID)
-		values (#{cusId},#{cusName},#{goodsName},#{goodsType},#{number},#{applicationDate},#{repositoryId})
+				create_date,
+				whouse_id,
+				in_application_id)
+		values (#{id},#{cusId},#{cusName},#{applicationDate},#{repositoryId},#{id})
 
     </insert>
 
-    <update id="update">
-
-    </update>
-
-
-
     <update id="updateById">
-        update wms_warehouseEntry
-        set repository_id = #{param2}
-        where id = #{param1}
+        update t_shstock_in
+        set whouse_id = #{param2}
+        where in_ws_no = #{param1}
     </update>
 
-    <delete id="deleteAll">
-
-    </delete>
+    <update id="updateState">
+        update t_shstock_in
+        set status  = '作废'
+        where in_application_id = #{applicationId}
+    </update>
 
     <delete id="deleteById">
-
+        delete from t_shstock_in where in_ws_no = #{warehousingEntryId}
     </delete>
 </mapper>
 

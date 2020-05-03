@@ -1,10 +1,12 @@
 package team.bishe.wms.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import team.bishe.wms.mapper.DetailedEntryMapper;
 import team.bishe.wms.mapper.WarehousingEntryMapper;
 import team.bishe.wms.service.ChangeRepositoryService;
 
+@Service
 public class ChangeRepositoryServiceImpl implements ChangeRepositoryService {
 
     @Autowired
@@ -14,7 +16,7 @@ public class ChangeRepositoryServiceImpl implements ChangeRepositoryService {
     private DetailedEntryMapper detailedEntryMapper;
 
     @Override
-    public Boolean ChangeRep(Integer warehouseEntryId,Integer repositoryId) {
+    public Boolean ChangeRep(String warehouseEntryId,Integer repositoryId) {
 
         warehousingEntryMapper.updateById(warehouseEntryId,repositoryId);
 

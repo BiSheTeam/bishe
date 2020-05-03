@@ -1,6 +1,7 @@
 package team.bishe.wms.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import team.bishe.wms.bean.Application;
 
@@ -23,7 +24,7 @@ public interface ApplicationMapper {
      * 查询指定订单id的记录
      * @return 返回指定id对应的Application
      */
-    List<Application> selectById(Integer id);
+    Application selectById(@Param("id") Integer id);
 
     /**
      * 查询指定用户id的订单
@@ -36,7 +37,9 @@ public interface ApplicationMapper {
      */
     List<Application> selectAll();
 
-    int selectNumByName(String goodsName);
+    int selectNumByName(String goodsName,Integer application_id);
+
+    String selectGoodsName(Integer id);
 
     /**
      * 插入一条新的申请单记录
@@ -49,7 +52,23 @@ public interface ApplicationMapper {
      */
     void update(Application application);
 
-    void updateState(Integer applicationId);
+    /**
+     * 根据用户id添加姓名
+     */
+    void updateName(Integer application_id);
+
+    /**
+     * 退货/移库
+     * @param applicationId
+     */
+    void updateState(String applicationId);
+
+    /**
+     *
+     * @param applicationId
+     */
+    void updateInwhouse(Integer applicationId);
+
     /**
      * 删除指定id的记录
      */

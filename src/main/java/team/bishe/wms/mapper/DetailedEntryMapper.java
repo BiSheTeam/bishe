@@ -2,6 +2,7 @@ package team.bishe.wms.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
+import team.bishe.wms.bean.Application;
 import team.bishe.wms.bean.DetailedEntry;
 import team.bishe.wms.bean.WarehousingEntry;
 
@@ -15,24 +16,20 @@ import java.util.List;
 @Component
 public interface DetailedEntryMapper {
 
-    List<DetailedEntry> selectRandom(Integer id , Integer cusId, Date startTime, Date endTime);
+    List<DetailedEntry> selectRandom(String id , Integer cusId, String startTime, String endTime);
 
-    List<DetailedEntry> selectAll();
 
-    List<DetailedEntry> selectById(Integer id);
+    List<DetailedEntry> selectById(Integer applicationId);
 
-    List<DetailedEntry> selectByCusId(Integer cusId);
 
-    List<DetailedEntry> selectByTime(Date startTime,Date endTime);
 
-    void insert(DetailedEntry detailedEntry);
+    void insertByApp(Application  application);
 
-    void update(DetailedEntry detailedEntry);
 
-    void updateById(Integer detailedEntryId,Integer repositoryId);
+    void updateById(String detailedEntryId,Integer repositoryId);
 
-    void deleteAll();
+    void updateState(String application);
 
-    void deleteById();
+    void deleteById(String detailedEntryId);
 
 }

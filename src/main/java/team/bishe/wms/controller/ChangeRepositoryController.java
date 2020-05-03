@@ -13,20 +13,20 @@ import team.bishe.wms.service.ChangeRepositoryService;
 @ResponseBody
 @RestController
 @CrossOrigin(origins = "*",maxAge = 3600)
-@RequestMapping(value = "/ChangeRepository")
+@RequestMapping(value = "/changeRepository")
 public class ChangeRepositoryController {
 
     @Autowired
     private ChangeRepositoryService changeRepositoryService;
 
-    @RequestMapping(value = "/choose", method = RequestMethod.POST)
-    public ApiResponse<Boolean> selectWarehouseEntry(Integer warehousingEntryId, Integer repositoryId) {
+    @RequestMapping(value = "/choose", method = RequestMethod.GET)
+    public ApiResponse<Boolean> selectWarehouseEntry(String warehousingEntryId, Integer repositoryId) {
         ApiResponse<Boolean> apiResponse = new ApiResponse<>();
         try {
             log.info("开始转移");
             Boolean state = changeRepositoryService.ChangeRep(warehousingEntryId, repositoryId);
-            apiResponse.setCode(100);
-            apiResponse.setMsg("成功");
+            apiResponse.setCode(20000);
+            apiResponse.setMsg("移库成功");
             apiResponse.setData(state);
         } catch (Exception e) {
             log.error("失败", e.getMessage());

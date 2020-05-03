@@ -48,11 +48,7 @@ public interface GoodsMapper {
      */
     void insert(Goods goods);
 
-    /**
-     * 批量插入新的记录到数据库中
-     * @param goods 存放 goods 信息的 List
-     */
-    void insertBatch(List<Goods> goods);
+
 
     /**
      * 更新 Goods 到数据库中
@@ -61,15 +57,4 @@ public interface GoodsMapper {
      */
     void update(Goods goods);
 
-    /**
-     * 删除指定 id 的 goods
-     * @param id 货物ID
-     */
-    void deleteById(Integer id);
-
-    /**
-     * 删除指定 goods name 的 goods
-     * @param goodsName 货物的名称
-     */
-    void deleteByName(String goodsName);
 }

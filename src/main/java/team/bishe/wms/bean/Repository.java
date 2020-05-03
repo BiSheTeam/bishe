@@ -7,8 +7,11 @@ import lombok.Data;
  */
 @Data
 public class Repository {
-    private Integer id;         //仓库id
+    private String id;         //仓库id
+    private String name;        //名字
     private String address;     //仓库地址
+    private String code;        //条码
+    private String type;        //类型
     private String status;      //仓库状态
     private String area;        //仓库面积
     private String desc;        //仓库描述

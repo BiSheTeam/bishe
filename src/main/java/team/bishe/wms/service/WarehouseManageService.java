@@ -21,7 +21,7 @@ public interface WarehouseManageService {
      * @throws Exception
      */
     Boolean WarehouseInApplication(Integer cusId, String goodsName,String goodsType,
-                                   Long goodsNum, String applicationDateStr, Integer repositoryId)throws Exception;
+                                   String goodsNum, String applicationDateStr, String repositoryId)throws Exception;
 
     /**
      * 验货装盘
@@ -36,18 +36,17 @@ public interface WarehouseManageService {
      * @throws Exception
      */
     Boolean InspectionLoading(Integer ApplicationID, String goodsName, String goodsType,
-                              Long goodsNum)throws Exception;
+                              Integer goodsNum)throws Exception;
 
     /**
      * 入库结算
      *  "尊敬的***客户，你的货物已经结算成功！请确认，如有任何疑问请及时联系我们。【物联网中心】"
      *
      * @param applicationId 申请单单号
-     * @param warehousingEntryID 入库单
      * @return
      * @throws Exception
      */
-    Boolean warehouseSettlement(Integer applicationId,Integer warehousingEntryID)throws Exception;
+    Double warehouseSettlement(Integer applicationId)throws Exception;
 
     /**
      * 货物入库

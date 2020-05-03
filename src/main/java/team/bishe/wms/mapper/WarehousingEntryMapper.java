@@ -15,25 +15,15 @@ import java.util.List;
 @Component
 public interface WarehousingEntryMapper {
 
-    List<WarehousingEntry> selectRandom(Integer id ,Integer cusId, Date startTime, Date endTime);
+    List<WarehousingEntry> selectRandom(String  id ,Integer cusId, String startTime, String endTime);
 
-    List<WarehousingEntry> selectAll();
+    List<WarehousingEntry> selectById(Integer applicationId);
 
-    List<WarehousingEntry> selectById(Integer id);
+    void insertByApp(Application application);
 
-    List<WarehousingEntry> selectByCusId(Integer cusId);
+    void updateById(String warehouseEntryId, Integer repositoryId);
 
-    List<WarehousingEntry> selectByTime(Date startTime,Date endTime);
+    void updateState(String applicationId);
 
-    void insert(WarehousingEntry warehousingEntry);
-
-    void insertByApp(List<Application>  list);
-
-    void update(WarehousingEntry warehousingEntry);
-
-    void updateById(Integer warehouseEntryId, Integer repositoryId);
-
-    void deleteAll();
-
-    void deleteById();
+    void deleteById(String warehousingEntryId);
 }

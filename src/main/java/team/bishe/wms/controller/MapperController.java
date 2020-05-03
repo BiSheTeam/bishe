@@ -29,13 +29,13 @@ public class MapperController {
     public ApiResponse<List<WarehousingEntry>> sele(){
         List<WarehousingEntry> list = null;
         try {
-            list = new ReceiptDocQueryImpl().selectwarehousingEntry(null,
-                    "2020-03-25","2020-03-30",null);
+            list = new ReceiptDocQueryImpl().selectwarehousingEntry(null,null,
+                    "2020-03-25","2020-03-30");
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return new ApiResponse<List<WarehousingEntry>>(111,"OOOOOOOOOK",list);
+        return new ApiResponse<List<WarehousingEntry>>(20000,"OOOOOOOOOK",list);
     }
 
 }

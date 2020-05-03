@@ -16,9 +16,9 @@ public class Application {
     private String cusName;   //客户姓名
     private String goodsName;  //货物名称
     private String goodsType;  //货物类型
-    private Long number;        //货物数量
+    private Integer number;        //货物数量
     private String applicationDate;     //申请日期
-    private Integer repositoryId;       //仓库id
+    private String repositoryId;       //仓库id
     private String state;       //状态
 
 

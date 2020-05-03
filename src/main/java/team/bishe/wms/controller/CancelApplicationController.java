@@ -19,13 +19,13 @@ public class CancelApplicationController {
     @Autowired
     private CancelApplicationService cancelApplicationService;
 
-    @RequestMapping(value = "/cancelOrder",method = RequestMethod.POST)
-    public ApiResponse cancelApplication(Integer applicationId){
+    @RequestMapping(value = "/cancelOrder",method = RequestMethod.GET)
+    public ApiResponse cancelApplication(String applicationId){
         ApiResponse apiResponse = new ApiResponse<>();
         try {
             log.info("申请退货");
             cancelApplicationService.cancelOrder(applicationId);
-            apiResponse.setCode(100);
+            apiResponse.setCode(20000);
             apiResponse.setMsg("退货成功");
         }catch (Exception e){
             log.error("失败",e.getMessage());

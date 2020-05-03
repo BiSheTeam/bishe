@@ -12,7 +12,7 @@ public interface ChangeRepositoryService {
      * 越库转移
      * 根据入库单号更改所属仓库
      */
-    Boolean ChangeRep(Integer warehouseEntryId,Integer repositoryId);
+    Boolean ChangeRep(String warehouseEntryId,Integer repositoryId);
 
 
 }

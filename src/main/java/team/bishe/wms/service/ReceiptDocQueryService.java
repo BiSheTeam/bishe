@@ -26,7 +26,7 @@ public interface ReceiptDocQueryService {
      * @param userId 客户ID
      * @return true
      */
-    List<WarehousingEntry> selectwarehousingEntry(Integer warehousingEntryID, String endDateStr, String startDateStr, Integer userId)throws Exception;
+    List<WarehousingEntry> selectwarehousingEntry(String warehousingEntryID, Integer userId, String startDateStr, String endDateStr)throws Exception;
 
     /**
      * 入库单明细查询
@@ -42,5 +42,19 @@ public interface ReceiptDocQueryService {
      * @param userId 客户ID
      * @return true
      */
-    List<DetailedEntry> selectWarehouseDetail(Integer warehousingEntryID, String endDateStr, String startDateStr, Integer userId)throws Exception;
+    List<DetailedEntry> selectWarehouseDetail(String warehousingEntryID, String endDateStr, String startDateStr, Integer userId)throws Exception;
+
+    /**
+     * 入库单删除
+     * @param warehousingEntryId
+     * @return
+     */
+    Boolean deleteEntry(String warehousingEntryId);
+
+    /**
+     * 明细单删除
+     * @param warehousingDetailId
+     * @return
+     */
+    Boolean deleteDetail(String warehousingDetailId);
 }

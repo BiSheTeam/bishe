@@ -2,18 +2,23 @@ package team.bishe.wms.service.impl;
 
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
-import team.bishe.wms.Exception.WarehouseManageServiceException;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import team.bishe.wms.bean.*;
 import team.bishe.wms.mapper.*;
 import team.bishe.wms.service.WarehouseManageService;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  *
  */
+@Service
 public class WarehouseManageServiceImpl implements WarehouseManageService {
 
     @Autowired
@@ -26,9 +31,9 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
     private ApplicationMapper applicationMapper;
     @Autowired
     private WarehousingEntryMapper warehousingEntryMapper;
+    @Autowired
+    private DetailedEntryMapper detailedEntryMapper;
 
-    //定义日期转换格式
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     /**
      *入库申请
      * @param cusId     客户id
@@ -37,34 +42,33 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @param goodsNum      货物数量
      * @param applicationDateStr    申请日期
      * @param repositoryId      仓库id
-     * @throws WarehouseManageServiceException 入库管理异常
      */
     @Override
     public Boolean WarehouseInApplication(Integer cusId, String goodsName, String goodsType,
-                                          Long goodsNum, String applicationDateStr, Integer repositoryId) throws WarehouseManageServiceException {
+                                          String goodsNum, String applicationDateStr, String repositoryId) {
         //判断客户id，仓库id是否有效
-        if (!userValidate(cusId) ||!repositoryValidate(repositoryId)) return false;
+        if (!userValidate(cusId) &&!repositoryValidate(repositoryId)) return false;
         //判断货物数量是否有意义
-        if (!(goodsNum >0))return false;
-
-        /*Date date = null;
-        if (!StringUtils.isEmpty(applicationDateStr)) {
-            try {
-                date = dateFormat.parse(applicationDateStr);
-            } catch (ParseException e) {
-                throw new WarehouseManageServiceException(e);
-            }
-        }*/
+        if (!(Integer.parseInt(goodsNum)>0))return false;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+        Date date = null;
+        try {
+            date = simpleDateFormat.parse(applicationDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String dateStr = dateFormat.format(date);
 
         Application application = new Application();
         application.setCusId(cusId);
         application.setGoodsName(goodsName);
         application.setGoodsType(goodsType);
-        application.setNumber(goodsNum);
-        application.setApplicationDate(applicationDateStr);
+        application.setNumber(Integer.parseInt(goodsNum));
+        application.setApplicationDate(dateStr);
         application.setRepositoryId(repositoryId);
         applicationMapper.insert(application);
-
+        applicationMapper.updateName(cusId);
 
         return true;
     }
@@ -79,50 +83,56 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @throws Exception
      */
     @Override
-    public Boolean InspectionLoading(Integer ApplicationID, String goodsName, String goodsType, Long goodsNum) throws WarehouseManageServiceException {
-        List<Application> list = applicationMapper.selectById(ApplicationID);
-        for (Application application:list) {
+    public Boolean InspectionLoading(Integer ApplicationID, String goodsName, String goodsType, Integer goodsNum) {
+        Application application = applicationMapper.selectById(ApplicationID);
+        Boolean b=false;
 
             try {
 
                 if (application.getGoodsName() != null && application.getGoodsType() != null && application.getNumber() != null
                         && application.getGoodsName().equals(goodsName) && application.getGoodsType().equals(goodsType)
                         && application.getNumber().equals(goodsNum) ){
-                    return true;
+                    b=true;
+
                 }else {
                     application.setGoodsName(goodsName);
                     application.setGoodsType(goodsType);
                     application.setNumber(goodsNum);
+                    application.setId(ApplicationID);
                     applicationMapper.update(application);
-                    return true;
+                    b=true;
                 }
             }catch (Exception e){
-                throw new WarehouseManageServiceException(e);
+                e.printStackTrace();
             }
 
-        }
-        return false;
+            return b;
+
     }
 
     /**
      *结算
      *
      * @param applicationId 申请单单号
-     * @param warehousingEntryID 入库单
      * @return
      */
     @Override
-    public Boolean warehouseSettlement(Integer applicationId, Integer warehousingEntryID){
-        List<Application> list = applicationMapper.selectById(applicationId);
-        Double value = null;
-        for (Application application:list) {
-            double y = goodsMapper.selectValueByName(application.getGoodsName());
-            long x = applicationMapper.selectNumByName(application.getGoodsName());
-            value = value + x*y;
+    public Double warehouseSettlement(Integer applicationId){
+        Double v = 0.0;
+        int number = 0;
+        double value=0.0;
+        try {
+            String s = applicationMapper.selectGoodsName(applicationId);
+            number = applicationMapper.selectNumByName(s,applicationId);
+             value = goodsMapper.selectValueByName(s);
+            if (number != 0 && value != 0){
+                v = value * number;
+            }
+        }catch (Exception e){
+
+            e.printStackTrace();
         }
-
-
-        return true;
+        return v;
     }
 
     /**
@@ -133,12 +143,33 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @throws Exception
      */
     @Override
-    public Boolean inWarehouse(Integer applicationId) throws Exception {
-        List<Application> list = applicationMapper.selectById(applicationId);
-        WarehousingEntry warehousingEntry = new WarehousingEntry();
-        warehousingEntryMapper.insertByApp(list);
-        return null;
+    public Boolean inWarehouse(Integer applicationId) {
+        Application application = applicationMapper.selectById(applicationId);
+        //判断该申请单是否在入库表里
+        if (!entryValidate(applicationId)) warehousingEntryMapper.insertByApp(application);
+
+        //是否在明细表里
+        if (!detailValidate(applicationId)) detailedEntryMapper.insertByApp(application);
+
+        applicationMapper.updateInwhouse(applicationId);
+        return true;
     }
+
+    private boolean detailValidate(Integer applicationId){
+        List<DetailedEntry> list = null;
+
+        list =  detailedEntryMapper.selectById(applicationId);
+        return  list.size()>0;
+    }
+
+    private boolean entryValidate(Integer applicationId){
+        List<WarehousingEntry> list = null;
+
+        list =  warehousingEntryMapper.selectById(applicationId);
+
+        return list.size()>0;
+    }
+
 
     /**
      * 检查客户ID对应的记录是否存在
@@ -146,15 +177,18 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @param cusId 客户ID
      * @return 若存在则返回true，否则返回false
      */
-    private boolean userValidate(Integer cusId)throws WarehouseManageServiceException {
+    private boolean userValidate(Integer cusId) {
+        List<Customer> customers =null;
         try {
-            Customer customer = customerMapper.selectById(cusId);
+            customers = customerMapper.selectById(cusId);
 
-            return customer != null;
-        } catch (PersistenceException e) {
-            throw new WarehouseManageServiceException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return customers != null;
+
     }
+
 
     /**
      *检查仓库ID对应的记录是否存在
@@ -162,13 +196,14 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @param repositoryId 仓库ID
      * @return 若存在则返回true，否则返回false
      */
-    private boolean repositoryValidate(Integer repositoryId)throws WarehouseManageServiceException{
+    private boolean repositoryValidate(String repositoryId){
+        List<Repository> repositories =null;
         try{
-            Repository repository = repositoryMapper.selectByID(repositoryId);
-            return repository != null;
-        }catch (PersistenceException e){
-            throw new WarehouseManageServiceException(e);
+            repositories = repositoryMapper.selectByID(repositoryId);
+        }catch (Exception e){
+            e.printStackTrace();
         }
+        return repositories != null;
     }
 
     /**
@@ -177,12 +212,13 @@ public class WarehouseManageServiceImpl implements WarehouseManageService {
      * @param goodsId 货物ID
      * @return 若存在则返回true，否则返回false
      */
-    private boolean goodsValidate(Integer goodsId) throws WarehouseManageServiceException {
+    private boolean goodsValidate(Integer goodsId)  {
+        Goods goods =null;
         try {
-            Goods goods = goodsMapper.selectById(goodsId);
-            return goods != null;
-        } catch (PersistenceException e) {
-            throw new WarehouseManageServiceException(e);
+            goods = goodsMapper.selectById(goodsId);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return goods != null;
     }
 }

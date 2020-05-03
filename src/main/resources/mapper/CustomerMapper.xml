@@ -2,32 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="team.bishe.wms.mapper.CustomerMapper">
-    <resultMap id="customer" type="team.bishe.wms.bean.Customer">
-        <id property="id" column="CUSTOMER_ID"/>
-        <result property="name" column="CUSTOMER_NAME"/>
-        <result property="telephone" column="CUSTOMER_TEL"/>
-        <result property="email" column="CUSTOMER_EMAIL"/>
-        <result property="address" column="CUSTOMER_ADDRESS"/>
-    </resultMap>
 
-    <select id="selectAll" resultMap="customer">
-        select * from wms_customer
+
+
+    <select id="selectById" resultType="team.bishe.wms.bean.Customer">
+        select customer_name as name
+        from customer
+        where customer_id = #{id}
     </select>
 
-    <select id="selectById" resultMap="customer">
-        select * from wms_customer where customer_id = #{id}
+    <select id="selectByName" resultType="team.bishe.wms.bean.Customer">
+        select * from customer where customer_name = #{name}
     </select>
 
-    <select id="selectByName" resultMap="customer">
-        select * from wms_customer where customer_name = #{name}
-    </select>
-
-    <insert id="insert">
-        insert into wms_customer(customer_id,customer_name,customer_tel,customer_email,customer_address)
+    <insert id="insert" parameterType="team.bishe.wms.bean.Customer">
+        insert into customer(customer_id,customer_name,customer_tel,customer_email,customer_address)
         values(#{id},#{name},#{telephone},#{email},#{address})
     </insert>
 
-    <update id="update">
+    <update id="update" parameterType="team.bishe.wms.bean.Customer">
         update wms_customer
         set customer_name = #{name},
             customer_tel = #{telephone},
@@ -36,13 +29,7 @@
         where customer_id =#{id}
     </update>
 
-    <delete id="deleteById">
-        delete from wms_customer
-        where customer_id = #{id}
-    </delete>
 
-    <delete id="deleteByName">
-        delete from wms_customer
-        where customer_name = #{name}
-    </delete>
+
+
 </mapper>
